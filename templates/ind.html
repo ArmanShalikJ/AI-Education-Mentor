@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger Style Chatbot Interface</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+        .chat-container {
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .chat-header {
+            background-color: #0084ff;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .chat-header h3 {
+            margin: 0;
+        }
+        .chat-box {
+            flex-grow: 1;
+            padding: 15px;
+            background-color: #f5f5f5;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .chat-footer {
+            background-color: #fafafa;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        .chat-footer textarea {
+            flex-grow: 1;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 14px;
+            outline: none;
+            resize: none;
+            height: 40px;
+        }
+        .chat-footer button {
+            margin-left: 10px;
+            padding: 8px 15px;
+            border: none;
+            background-color: #0084ff;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .chat-message {
+            max-width: 80%;
+            padding: 10px;
+            border-radius: 20px;
+            word-wrap: break-word;
+        }
+        .message-user {
+            align-self: flex-end;
+            background-color: #dcf8c6;
+        }
+        .message-bot {
+            align-self: flex-start;
+            background-color: white;
+        }
+        .message-bot .volume-btn {
+            margin-left: 10px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <h3>I am your Educational Mentor</h3>
+    </div>
+    <div class="chat-box" id="chat-box">
+        <!-- Chat messages will be appended here dynamically -->
+    </div>
+    <div class="chat-footer">
+        <textarea id="message-input" placeholder="Ask anything..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="startVoiceRecognition()">🎤</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    const chatBox = document.getElementById('chat-box');
+    const inputField = document.getElementById('message-input');
+    let currentUtterance = null; 
+    let isSpeaking = false; 
+
+    const appendMessage = (message, isUser) => {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('chat-message');
+        messageDiv.classList.add(isUser ? 'message-user' : 'message-bot');
+        
+        const textSpan = document.createElement('span');
+        textSpan.innerText = message;
+        messageDiv.appendChild(textSpan);
+
+        if (!isUser) {
+            const volumeButton = document.createElement('button');
+            volumeButton.innerHTML = '🔊';
+            volumeButton.classList.add('volume-btn');
+            volumeButton.onclick = () => toggleVoice(message, volumeButton);
+            messageDiv.appendChild(volumeButton);
+        }
+
+        chatBox.appendChild(messageDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    };
+
+    const sendMessage = () => {
+        const message = inputField.value.trim();
+        if (!message) return;
+        appendMessage(message, true);
+        inputField.value = '';
+
+        $.ajax({
+            type: "POST",
+            url: "/get_response",
+            contentType: "application/json",
+            data: JSON.stringify({ message: message }),
+            success: (response) => {
+                appendMessage(response.response, false);
+            },
+            error: () => {
+                appendMessage('Error connecting to server.', false);
+            }
+        });
+    };
+
+    const startVoiceRecognition = () => {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-US';
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            inputField.value = transcript;
+            sendMessage();
+        };
+
+        recognition.start();
+    };
+
+    const toggleVoice = (message, button) => {
+        if (isSpeaking) {
+            window.speechSynthesis.cancel(); 
+            button.innerHTML = '🔊';
+            isSpeaking = false;
+        } else {
+            if (currentUtterance) window.speechSynthesis.cancel(); 
+            currentUtterance = new SpeechSynthesisUtterance(message);
+            currentUtterance.onend = () => {
+                button.innerHTML = '🔊';
+                isSpeaking = false;
+            };
+            window.speechSynthesis.speak(currentUtterance);
+            button.innerHTML = '⏸️'; 
+            isSpeaking = true;
+        }
+    };
+
+    inputField.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            if (event.shiftKey) {
+                const cursorPosition = inputField.selectionStart;
+                inputField.value = inputField.value.slice(0, cursorPosition) + '\n' + inputField.value.slice(cursorPosition);
+                inputField.selectionStart = cursorPosition + 1;
+                inputField.selectionEnd = cursorPosition + 1;
+                event.preventDefault();
+            } else {
+                sendMessage();
+                event.preventDefault();
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

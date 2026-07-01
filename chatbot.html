@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Support Chatbot - Prevent Dropout Rates</title>
+    <style>
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        
+        .intro-text {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        
+        .chat-container {
+            width: 350px;
+            height: 500px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        
+        .chat-header {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 15px 15px 0 0;
+        }
+
+        
+        .chat-body {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        
+        .chat-input {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            background-color: #f4f4f4;
+        }
+
+        .chat-input input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            outline: none;
+            font-size: 14px;
+            margin-right: 10px;
+            transition: all 0.2s;
+        }
+
+        .chat-input input[type="text"]:focus {
+            border-color: #4CAF50;
+        }
+
+        .chat-input button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+
+        .chat-input button:hover {
+            background-color: #3e8e41;
+        }
+
+        
+        .message {
+            margin: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .user-message {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .bot-message {
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        .message p {
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            max-width: 80%;
+        }
+
+        .user-message p {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .bot-message p {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        
+        .chat-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-body::-webkit-scrollbar-thumb {
+            background-color: #4CAF50;
+            border-radius: 10px;
+        }
+
+        
+        @keyframes slideUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .message {
+            animation: slideUp 0.3s ease;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="intro-text">Need Help? Ask our Chatbot!</div>
+
+    
+    <div class="chat-container" id="chatbot">
+        <div class="chat-header">
+            <h3>Student Support Chatbot</h3>
+        </div>
+        <div class="chat-body" id="chatBody">
+            
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        
+        function sendMessage() {
+            var userInput = document.getElementById('userInput').value;
+
+            if (userInput.trim() !== '') {
+                addMessage('user', userInput);
+
+                
+                var botResponse = getBotResponse(userInput);
+                setTimeout(function() {
+                    addMessage('bot', botResponse);
+                }, 500);
+
+                document.getElementById('userInput').value = '';  
+            }
+        }
+
+        
+        function addMessage(sender, message) {
+            var chatBody = document.getElementById('chatBody');
+            var messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', sender + '-message');
+
+            var messageContent = document.createElement('p');
+            messageContent.textContent = message;
+            messageDiv.appendChild(messageContent);
+
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight; 
+        }
+
+    
+        function getBotResponse(userMessage) {
+            userMessage = userMessage.toLowerCase();
+
+            if (userMessage.includes('hello') || userMessage.includes('hi')) {
+                return "Hello! How can I help you today?";
+            } else if (userMessage.includes('dropout')) {
+                return "Are you facing any challenges? We can guide you on how to improve your academic performance or mental well-being.";
+            } else if (userMessage.includes('support') || userMessage.includes('help')) {
+                return "We have resources to help with study tips, mental health, and academic counseling. What specifically would you like help with?";
+            } else if (userMessage.includes('stress')) {
+                return "It's normal to feel stressed at times. Consider speaking with a counselor or trying relaxation techniques like deep breathing or meditation.";
+            } else if (userMessage.includes('scholarship')) {
+                return "There are various scholarships available for students. You can check our scholarship portal for details.";
+            } else {
+                return "Sorry, I didn't quite understand that. Can you please provide more details?";
+            }
+        }
+    </script>
+
+</body>
+</html>

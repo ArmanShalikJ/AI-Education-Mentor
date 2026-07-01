@@ -1,0 +1,815 @@
+{
+
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Good morning", "Good evening", "Hey", "How are you?", "Is anyone there?", "Greetings"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! How can I help you?", "Greetings! What can I do for you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Have a nice day", "Take care", "Catch you later"],
+      "responses": ["Goodbye! Have a great day!", "See you later!", "Take care and have a nice day!"]
+    },
+
+    
+   {
+  "tag": "top_companies",
+  "patterns": [
+    "What are the top companies visited?",
+    "Which companies are the top recruiters?",
+    "Can you list the top companies that visit for placements?",
+    "Top companies that come for placements?"
+  ],
+  "responses": [
+    "The top companies that visit our campus for placements include [Company A], [Company B], and [Company C].",
+    "Some of the leading companies that frequently visit are [Company A], [Company B], and [Company C]."
+  ]
+},
+{
+  "tag": "total_companies_visited",
+  "patterns": [
+    "How many total companies have visited the campus?",
+    "What is the total number of companies that visit for placements?",
+    "Can you tell me the total number of companies that come for placements?"
+  ],
+  "responses": [
+    "A total of [Number] companies have visited our campus for placements this year.",
+    "We have had [Number] companies visit the campus for placements."
+  ]
+},
+{
+  "tag": "companies_visited",
+  "patterns": [
+    "What are the companies that have visited the campus?",
+    "Can you list all the companies that came for placements?",
+    "Companies that visited for placements?"
+  ],
+  "responses": [
+    "Companies that have visited the campus include [Company A], [Company B], [Company C], and many more.",
+    "The companies that have come for placements this year are [Company A], [Company B], and [Company C]."
+  ]
+},
+
+      
+ {
+            "tag": "distance",
+            "patterns": ["What is the distance between the college and the hostel?", "How far is the hostel from the university?", "Distance from university to hostel room", "Is the hostel close to the college?"],
+            "responses": [
+                "The distance between the college and the hostel is 500 meters, and it’s a comfortable walk.",
+                "The hostel is just 500 meters away from the university, and it's walkable in a few minutes!",
+                "It's only 500 meters from the hostel to the college, and it's an easy and pleasant walk."
+            ]
+        },
+{
+              "tag": "campus_transportation",
+              "patterns": ["Is there transportation from the college to the hostel?", "How do students travel from the college to the hostel?", "Transportation options for hostel and day scholars?", "How do day scholars commute?"],
+              "responses": [
+                  "Within the campus, electric vehicles (EVs) are available to help students move between the college and hostel. For day scholars, they can be conveniently dropped at the nearby 'EB' bus stop if needed.",
+                  "We provide electric vehicles (EVs) for internal transport between the college and hostel. Day scholars can make use of the 'EB' bus stop for their commute.",
+                  "EVs are available for travel within the campus, including from the college to the hostel. Day scholars can be dropped at the 'EB' bus stop if required."
+              ]
+},
+        
+
+{
+  "tag": "placement_head",
+  "patterns": [
+    "Who is the placement head?",
+    "Can you tell me the name of the placement head?",
+    "Who manages the placement activities?"
+  ],
+  "responses": [
+    "The current placement head is [Name].",
+    "The placement head responsible for this year is [Name]."
+  ]
+},
+{
+  "tag": "placement_coordinator",
+  "patterns": [
+    "Who is the placement coordinator?",
+    "Can you tell me the name of the placement coordinator?",
+    "Who coordinates the placement activities?"
+  ],
+  "responses": [
+    "The placement coordinator is [Name].",
+    "[Name] is the coordinator for placement activities."
+  ]
+},
+{
+  "tag": "highest_placements_department",
+  "patterns": [
+    "Which department has the highest placements?",
+    "Can you tell me which department has the most placements?",
+    "Department with the highest number of placements?"
+  ],
+  "responses": [
+    "The department with the highest number of placements is [Department].",
+    "[Department] has the highest placement rate this year."
+  ]
+},
+{
+  "tag": "students_placed_last_year",
+  "patterns": [
+    "How many students were placed last year?",
+    "Can you tell me the number of students placed last year?",
+    "How many students got placed in the previous year?"
+  ],
+  "responses": [
+    "Last year, [Number] students were placed.",
+    "[Number] students were successfully placed in the previous year."
+  ]
+},
+{
+  "tag": "students_placed_so_far",
+  "patterns": [
+    "How many students have been placed so far?",
+    "Can you tell me the number of students placed until now?",
+    "How many students are placed up to now?"
+  ],
+  "responses": [
+    "So far, [Number] students have been placed.",
+    "[Number] students have been placed till now."
+  ]
+},
+{
+  "tag": "interns",
+  "patterns": [
+    "How many of them do internships?",
+    "Can you tell me the number of students doing internships?",
+    "Are there students who do internships? How many?"
+  ],
+  "responses": [
+    "[Number] students are currently doing internships.",
+    "There are [Number] students involved in internships."
+  ]
+},
+{
+  "tag": "placement_cell_internships",
+  "patterns": [
+    "Does the college placement cell arrange internships?",
+    "Can you tell me if the placement cell helps in arranging internships?",
+    "Does the placement cell support internships?"
+  ],
+  "responses": [
+    "Yes, the college placement cell arranges internships for students.",
+    "The placement cell does assist in arranging internships."
+  ]
+},
+{
+  "tag": "placement_cell_details",
+  "patterns": [
+    "Tell me about the placement cell.",
+    "Can you provide details about the placement cell?",
+    "What does the placement cell do?"
+  ],
+  "responses": [
+    "The placement cell is responsible for managing and facilitating placement activities. They organize interviews, coordinate with companies, and provide career guidance.",
+    "Our placement cell helps students with career counseling, arranging interviews, and connecting with potential employers."
+  ]
+},
+{
+  "tag": "placement_training_start",
+  "patterns": [
+    "When does the placement training start?",
+    "Can you tell me the start date for placement training?",
+    "When will the placement training begin?"
+  ],
+  "responses": [
+    "Placement training starts on [Date].",
+    "The placement training is scheduled to begin on [Date]."
+  ]
+},
+{
+  "tag": "special_placement_process",
+  "patterns": [
+    "What are the special processes for placements?",
+    "Can you tell me about the special placement procedures?",
+    "Are there any unique processes for placements?"
+  ],
+  "responses": [
+    "The special processes for placements include [Description of special processes].",
+    "Unique placement procedures involve [Description of special processes]."
+  ]
+},
+{
+  "tag": "students_placed_departments",
+  "patterns": [
+    "How many students were placed in particular departments (CSE/AI/MECH)?",
+    "Can you provide the number of placements in different departments?",
+    "How many students from each department got placed?"
+  ],
+  "responses": [
+    "[Number] students from the CSE department, [Number] from AI, and [Number] from MECH were placed.",
+    "The placement numbers are as follows: [Number] in CSE, [Number] in AI, and [Number] in MECH."
+  ]
+},
+{
+  "tag": "placement_salary_details",
+  "patterns": [
+    "placements",
+    "salary",
+    "packages",
+    "placement salary",
+    "salary packages",
+    "highest package",
+    "lowest package",
+    "placement details",
+    "Tell me about placements",
+    "Tell me about the salary packages",
+    "Placement details",
+    "What are the salary packages?",
+    "Can you tell me the placement salary details?",
+    "How much is the salary package?",
+    "What is the highest salary package offered?",
+    "What is the lowest salary package offered?",
+    "Can you tell me about the highest, lowest, and average salary packages?",
+    "Minimum and maximum packages?",
+    "Placement salary",
+    "What salary package did students get?",
+    "Tell me about the placement packages"
+  ],
+  "responses": [
+    "The highest salary package offered this year is 25 LPA, the lowest package is 3 LPA, and the average package is 8 LPA.",
+    "This year, the salary packages range from 3 LPA to 25 LPA, with an average of 8 LPA.",
+    "In placements, the highest package is 25 LPA, the lowest is 3 LPA, and the average salary offered is around 8 LPA.",
+    "The placement packages start from 3 LPA, with the highest being 25 LPA. The average package offered is 8 LPA.",
+    "This year’s placements had packages from 3 LPA to 25 LPA, with the average package being 8 LPA."
+  ]
+},
+{
+  "tag": "highest_salary_package",
+  "patterns": [
+    "What is the highest salary package offered?",
+    "Can you tell me the highest salary package?",
+    "What’s the maximum salary package during placements?"
+  ],
+  "responses": [
+    "The highest salary package offered this year is 25 LPA.",
+    "The maximum salary package this year was 25 LPA."
+  ]
+},
+{
+  "tag": "lowest_salary_package",
+  "patterns": [
+    "What is the lowest salary package offered?",
+    "Can you tell me the lowest salary package?",
+    "What’s the minimum salary package during placements?"
+  ],
+  "responses": [
+    "The lowest salary package offered this year is 3 LPA.",
+    "The minimum salary package this year was 3 LPA."
+  ]
+},
+{
+  "tag": "average_salary_package",
+  "patterns": [
+    "What is the average salary package offered?",
+    "Can you tell me the average salary package?",
+    "What’s the average salary package during placements?"
+  ],
+  "responses": [
+    "The average salary package offered this year is 8 LPA.",
+    "The average salary package this year is 8 LPA."
+  ]
+},
+{
+  "tag": "packages",
+  "patterns": [
+    "What are the packages offered?",
+    "Tell me about the salary packages",
+    "Minimum and maximum packages?",
+    "Average package offered"
+  ],
+  "responses": [
+    "The minimum package is 3 LPA, the highest package is 25 LPA, and the average package is 8 LPA.",
+    "We offer packages ranging from 3 LPA to 25 LPA, with an average of 8 LPA.",
+    "The salary packages start from 3 LPA and go up to 25 LPA. The average is around 8 LPA."
+  ]
+},
+ {
+    "tag": "fees",
+    "patterns": [
+      "Fee",
+      "fee",
+      "Fee?",
+      "fee?",
+      "What is the fee structure?",
+      "Tell me about the fees",
+      "How much is the tuition?",
+      "What is the annual fee?",
+      "How much do I have to pay for the hostel?",
+      "What is the amount to be paid every year?",
+      "What will be the cost?",
+      "What is the cost of the course?",
+      "How much amount to be paid?",
+      "How much will it cost for a single course?",
+      "What will be the total money?",
+      "How much money is needed for the course?",
+      "How much money should be paid every year?",
+      "What will be the amount?",
+      "How much will be the amount?",
+      "What will be the price?",
+      "How much will be the price for the course?",
+      "What will be the total price?"
+    ],
+    "responses": [
+      "The fee structure varies for PG and UG studies. Please specify the course to get the exact fee details."
+    ]
+  },
+
+
+
+
+   
+ 
+
+  {
+    "tag": "fees_artificial_intelligence_and_data_science",
+    "patterns": [
+      "What is the fee structure for Artificial Intelligence and Data Science?",
+      "Tell me about the fees for Artificial Intelligence and Data Science",
+      "How much is the tuition for Artificial Intelligence and Data Science?",
+      "What is the annual fee for Artificial Intelligence and Data Science?",
+      "How much is the fee for AI and DS?",
+      "How much is the fee for AIDS?",
+      "what is the fee for AIDS?",
+      "what will be  the fee for AI&DS?",
+      "what will be  the fee for AI-DS?",
+      "what will be  the fee for AIDS?",
+      "What is the fee for artificial intelligence and data science engineering?"
+    ],
+    "responses": [
+      "The fee for Artificial Intelligence and Data Science Engineering is 15,000 rupee per semester and for the first graduate student 9,000 rupee per semester."
+    ]
+  },
+  {
+    "tag": "fees_mechanical_engineering",
+    "patterns": [
+      "What is the fee structure for Mechanical Engineering?",
+      "Tell me about the fees for Mechanical Engineering",
+      "How much is the tuition for Mechanical Engineering?",
+      "What is the annual fee for Mechanical Engineering?",
+      "How much is the fee for Mechanical Engineering?",
+      "How much is the fee for MECH?",
+      "what is the fee for MECH?",
+      "what will be  the fee for MECH?"
+    ],
+    "responses": [
+           "The fee for Mechanical Engineering is 15,000 rupee per semester and for the first graduate student 9,000 rupee per semester."
+    ]
+  },
+  {
+    "tag": "fees_computer_science_engineering",
+    "patterns": [
+      "What is the fee structure for Computer Science Engineering?",
+      "Tell me about the fees for Computer Science Engineering",
+      "How much is the tuition for Computer Science Engineering?",
+      "What is the annual fee for Computer Science Engineering?",
+      "How much is the fee for CSE?",
+      "How much is the fee for CSE?",
+      "what is the fee for CSE?",
+      "what will be  the fee for CSE?"
+    ],
+    "responses": [
+     "The fee for Computer Science Engineering is 15,000 rupee per semester and for the first graduate student 9,000 rupee per semester."
+    ]
+  },
+  {
+  "tag": "fees_electrical_and_electronics_engineering",
+  "patterns": [
+    "What is the fee structure for Electrical and Electronics Engineering?",
+    "Tell me about the fees for Electrical and Electronics Engineering",
+    "How much is the tuition for Electrical and Electronics Engineering?",
+    "What is the annual fee for Electrical and Electronics Engineering?",
+    "How much is the fee for EEE?",
+    "What is the fee for EEE?",
+    "What will be the fee for EEE?",
+    "EEE fee structure"
+  ],
+  "responses": [
+    "The fee for Electrical and Electronics Engineering is 15,000 rupees per semester, and for the first graduate student, it is 9,000 rupees per semester."
+  ]
+},
+{
+  "tag": "fees_electrical_communication_engineering",
+  "patterns": [
+    "What is the fee structure for Electrical Communication Engineering?",
+    "Tell me about the fees for Electrical Communication Engineering",
+    "How much is the tuition for Electrical Communication Engineering?",
+    "What is the annual fee for Electrical Communication Engineering?",
+    "How much is the fee for ECE?",
+    "What is the fee for ECE?",
+    "What will be the fee for ECE?",
+    "ECE fee structure"
+  ],
+  "responses": [
+    "The fee for Electrical Communication Engineering is 15,000 rupees per semester, and for the first graduate student, it is 9,000 rupees per semester."
+  ]
+},
+
+
+  {
+    "tag": "exam_fee",
+    "patterns": [
+      "What is the exam fee?",
+      "Tell me about the exam fee",
+      "How much is the exam fee?",
+      "Fee for exams",
+      "Exam payment details",
+      "What are the charges for the exam?",
+      "Can you provide the exam fee structure?",
+      "What is the amount to pay for the exam?",
+      "Exam fee details",
+      "How much do I need to pay for the exam?"
+    ],
+    "responses": [
+      "The exam fee for this semester is ₹300 per subject.",
+      "For regular exams, the fee is ₹300 per subject. Please make sure to pay before the deadline.",
+      "Each exam will cost ₹300. Kindly visit the administration office or the online portal for payment.",
+      "The fee for each subject exam is ₹300. Please check the due dates for payment.",
+      "Exam fees are ₹300 per subject. If you have any backlogs, the same fee applies per subject."
+    ]
+  },
+  {
+    "tag": "internet",
+    "patterns": [
+      "Is there WiFi in the college?",
+      "Tell me about the internet facilities on campus",
+      "Do I get internet access at the university?",
+      "College WiFi details",
+      "Is WiFi available 24/7 on campus?",
+      "What are the internet speeds at the university?",
+      "Can I use WiFi in all areas of the college?",
+      "How fast is the internet in the college?",
+      "Is internet access free for students?",
+      "Does the university offer high-speed internet?",
+      "Is the WiFi reliable in all parts of the campus?",
+      "How can I connect to the college WiFi?",
+      "Is there WiFi in the university library?",
+      "Is the internet connection stable for academic work?",
+      "Are there any restrictions on the internet usage?",
+      "Can I use the WiFi for personal use?",
+      "Where can I get the WiFi login details on campus?",
+      "Does the college provide internet access to students?",
+      "Is internet access available in the college hostel?",
+      "Are there any data limits on the campus WiFi?"
+    ],
+    "responses": [
+      "Yes, we offer high-speed WiFi throughout the campus, including classrooms, libraries, and common areas. You can contact the IT desk for login credentials.",
+      "WiFi is available 24/7 across the university, providing stable speeds for both academic and personal use.",
+      "You can access the college WiFi in all major areas, and it's available for free to all students.",
+      "The internet speed is fast enough for streaming, research, and regular online activities. Feel free to contact the IT team if you need assistance connecting."
+    ]
+  },
+  {
+    "tag": "administrative_contact_support",
+    "patterns": [
+      "Who do I contact for scholarship queries?",
+      "Can I get the administrative office phone number?",
+      "Administrative office contact information",
+      "How can I reach the college administration?",
+      "I need the college office contact details",
+      "Who handles administrative issues?",
+      "Who should I contact for fee-related issues?",
+      "Where can I get the contact information for fee inquiries?",
+      "How can I contact the administration for fee and scholarship concerns?",
+      "Can you provide the contact details of the administrative office?",
+      "Is there an email to contact the administrative office?",
+      "Where can I get information about scholarships?",
+      "Who do I contact for scholarship and fee-related concerns?"
+    ],
+    "responses": [
+      "For administrative matters such as fees, scholarships, or other college-related queries, you can contact the college administrative office at [office contact details].",
+      "Please reach out to the administrative office for any questions regarding fees, scholarships, and other administrative concerns. Their contact information is available on the college website.",
+      "If you have any queries related to scholarships or administrative processes, feel free to visit the administrative office during working hours or contact them via phone at [office contact details].",
+      "For support regarding administrative issues, including fees and scholarships, contact the administrative office directly. They are available to assist you during working hours."
+    ]
+  },
+  {
+    "tag": "department_contact_support",
+    "patterns": [
+      "Who can I contact for academic issues?",
+      "what is the use of the department",
+      "use of the department",
+      "what is the department for?",
+      "how the department are hepful",
+      "what is the usage of departments",
+      "Who do I talk to for academic doubts?",
+      "Can I get the department faculty contact?",
+      "Department faculty phone number",
+      "How can I reach the academic department?",
+      "Who should I contact for course-related issues?",
+      "I need help with academic problems, who can assist?",
+      "Where can I find my department contact information?",
+      "Can you provide the contact for my faculty?",
+      "Is there an email to reach the department faculty?",
+      "How can I get in touch with my department?",
+      "Who handles course-related concerns?",
+      "Can you provide the contact details of my department head?"
+    ],
+    "responses": [
+      "For any academic queries or doubts, you can contact the respective department's faculty or the head of the department. They will assist you with course-related issues.",
+      "You can reach out to your department faculty via email or phone for any academic concerns. The contact details are available on the college website.",
+      "For support regarding academic issues, please reach your department faculty. They are available during working hours to help with any course-related questions.",
+      "To get in touch with your department faculty, check the department's notice board or website for contact details. They are here to help with academic guidance."
+    ]
+  },
+  {
+    "tag": "college_timing",
+      "patterns": [
+    "What are the college hours?",
+    "What are the clg hours?",
+    "What are the University hours?",
+    "What are the uni hours?",
+    "What are the univ hours?",
+    "Can you tell me the college timings?",
+    "Can you tell me the clg timings?",
+    "Can you tell me the University timings?",
+    "Can you tell me the uni timings?",
+    "Can you tell me the univ timings?",
+    "What time does the college start and end?",
+    "What time does the clg start and end?",
+    "What time does the University start and end?",
+    "What time does the uni start and end?",
+    "What time does the univ start and end?",
+    "When does the college open and close?",
+    "When does the clg open and close?",
+    "When does the University open and close?",
+    "When does the uni open and close?",
+    "When does the univ open and close?",
+    "College timings",
+    "Clg timings",
+    "University timings",
+    "Uni timings",
+    "What are the working hours of the college?",
+    "What are the working hours of the clg?",
+    "What are the working hours of the University?",
+    "What are the working hours of the uni?",
+    "What are the working hours of the univ?",
+    "At what time does college start?",
+    "At what time does clg start?",
+    "At what time does University start?",
+    "At what time does uni start?",
+    "At what time does univ start?",
+    "What is the closing time of the college?",
+    "What is the closing time of the clg?",
+    "What is the closing time of the University?",
+    "What is the closing time of the uni?",
+    "What is the closing time of the univ?",
+    "How long is the college day?",
+    "How long is the clg day?",
+    "How long is the University day?",
+    "How long is the uni day?",
+    "How long is the univ day?",
+    "What time should I arrive at the college?",
+    "What time should I arrive at the clg?",
+    "What time should I arrive at the University?",
+    "What time should I arrive at the uni?",
+    "What time should I arrive at the univ?",
+    "Can you tell me the class timings?",
+    "Can you tell me the clg class timings?",
+    "Can you tell me the University class timings?",
+    "Can you tell me the uni class timings?",
+    "Can you tell me the univ class timings?",
+    "When do classes start and finish?",
+    "When do clg classes start and finish?",
+    "When do University classes start and finish?",
+    "When do uni classes start and finish?",
+    "When do univ classes start and finish?"
+  ],
+    "responses": [
+      "The college timing is from 9:10 AM to 5:20 PM.",
+      "Classes run from 9:10 AM to 5:20 PM. Please make sure to be on time.",
+      "The working hours of the college are from 9:10 AM in the morning to 5:20 PM in the evening.",
+      "College operates from 9:10 AM to 5:20 PM, with classes and activities scheduled throughout the day."
+    ]
+  },
+  {
+    "tag": "college_university_security",
+    "patterns": [
+      "What are the security measures in the college?",
+      "Is the university safe?",
+      "Tell me about college security",
+      "What security is there at the university?",
+      "Are there guards at the entrance?",
+      "How secure is the college campus?",
+      "What safety measures are in place for students?",
+      "University safety protocols",
+      "How does the college ensure student safety?",
+      "Security system in the college"
+    ],
+    "responses": [
+      "The college/university is highly secure, with 24/7 security personnel stationed at both entrance gates. Each gate is under constant CCTV surveillance to ensure safety at all times.",
+      "We take student safety very seriously. Both campus entrances have security guards and surveillance cameras, while the entire campus is monitored with a state-of-the-art security system. You can feel safe and secure on campus.",
+      "The university ensures full security with CCTV cameras covering all major areas, and security personnel at every entrance. Your safety is our top priority."
+    ]
+  },
+  {
+    "tag": "special_day_events",
+    "patterns": [
+      "What special events are celebrated in the college?",
+      "Are there any celebrations for festivals like Pongal and Onam?",
+      "Tell me about special day events in the university.",
+      "How do we celebrate special occasions in the college?",
+      "What kind of festivities happen during Indian festivals in the university?"
+    ],
+    "responses": [
+      "Every special occasion, such as Pongal and Onam, is celebrated joyfully in the college. Events are filled with fun activities, competitions, and engaging performances, bringing together students and staff in a festive spirit.",
+      "We celebrate all major Indian festivals with great enthusiasm. Special day events include cultural performances, games, and delicious food, ensuring a memorable experience for everyone involved."
+    ]
+  },
+  {
+    "tag": "college_events",
+
+    "patterns": [
+    "What kind of events are organized at the college?",
+    "What types of events does the college host?",
+    "Can you give me an overview of college celebrations?",
+    "What types of activities are included in the annual day?",
+    "Tell me about the freshers' events and activities.",
+    "What are the highlights of the sports day at college?",
+    "What can I expect during symposia in college?",
+    "What events take place during the cultural fest?",
+    "Are there any workshops or seminars organized at the college?",
+    "What are the upcoming events in the college?",
+    "How often are events held at the college?",
+    "What special days are celebrated at the college?",
+    "Can you share details about the college’s annual fest?",
+    "What activities are organized for students during orientation?",
+    "What competitions are held at the college?",
+    "Are there guest lectures or talks arranged at the college?",
+    "What kind of cultural activities happen at the college?",
+    "Can you tell me about the music or dance events at the college?",
+    "What are the sports events organized at the college?",
+    "Are there any volunteer opportunities during college events?",
+    "How do I participate in college events?",
+    "What events celebrate student achievements?",
+    "Can you give me more information about the college's charity events?",
+    "Are there any themed events or celebrations at the college?",
+    "What events promote student collaboration and interaction?",
+    "What types of exhibitions or fairs are held at the college?",
+    "Can you tell me about the alumni events at the college?",
+    "What are the traditions associated with college events?",
+    "How can I stay updated about college events?",
+    "What are the notable past events at the college?",
+    "Are there any inter-college events or competitions?",
+    "What kind of events are organized at the univ?",
+    "What types of events does the uni host?",
+    "Can you give me an overview of clg celebrations?",
+    "What types of activities are included in the annual day at the univ?",
+    "Tell me about the freshers' events and activities at the clg.",
+    "What are the highlights of the sports day at the uni?",
+    "What can I expect during symposia in the clg?",
+    "What events take place during the cultural fest at the univ?",
+    "Are there any workshops or seminars organized at the uni?",
+    "What are the upcoming events in the clg?",
+    "How often are events held at the univ?",
+    "What special days are celebrated at the uni?",
+    "Can you share details about the clg’s annual fest?",
+    "What activities are organized for students during orientation at the univ?",
+    "What competitions are held at the uni?",
+    "Are there guest lectures or talks arranged at the clg?",
+    "What kind of cultural activities happen at the univ?",
+    "Can you tell me about the music or dance events at the uni?",
+    "What are the sports events organized at the clg?",
+    "Are there any volunteer opportunities during univ events?",
+    "How do I participate in events at the uni?",
+    "What events celebrate student achievements at the clg?",
+    "Can you give me more information about the univ's charity events?",
+    "Are there any themed events or celebrations at the uni?",
+    "What events promote student collaboration and interaction at the clg?",
+    "What types of exhibitions or fairs are held at the univ?",
+    "Can you tell me about the alumni events at the clg?",
+    "What are the traditions associated with events at the univ?",
+    "How can I stay updated about events at the clg?",
+    "What are the notable past events at the univ?",
+    "Are there any inter-college events or competitions at the uni?"
+    ],
+    "responses": [
+      "The college organizes a variety of events throughout the year, creating a vibrant atmosphere for all students. Events like the annual day are filled with performances, competitions, and showcases of talent, bringing everyone together in a spirit of celebration and joy.",
+      "Freshers' events are designed to welcome new students with fun activities, games, and opportunities to meet fellow classmates. Sports day features thrilling competitions, team spirit, and friendly rivalries, ensuring everyone enjoys a day of excitement and camaraderie.",
+      "Symposia at the college offer a platform for learning and discussion, featuring engaging speakers and interactive sessions. These events encourage students to connect and explore new ideas while enjoying a dynamic and collaborative environment."
+    ]
+  },
+  {
+    "tag": "sports",
+    "patterns": [
+      "What sports facilities are available at the college?",
+      "Are there any sports teams I can join?",
+      "Tell me about the sports activities in the university.",
+      "What kind of sports do you have in college?",
+      "How can I participate in sports events?",
+      "Are there facilities for different sports?",
+      "What sports competitions are held in the college?",
+      "Do you have a gym in the college?",
+      "What sports are popular at the university?",
+      "Is there a sports day celebration?",
+      "What facilities are there for athletic training?",
+      "How can I join a sports team?"
+    ],
+    "responses": [
+      "Our college has various sports facilities, including a gym, playgrounds, and courts for basketball, tennis, and volleyball. Students can join teams for competitive events and practice regularly.",
+      "Students are encouraged to participate in sports through various events and teams available for different activities. Join a team to hone your skills and compete!",
+      "With well-equipped gym facilities and dedicated sports teams for all genders, students have ample opportunities to develop their athletic skills and participate in friendly matches, tournaments, and inter-college competitions."
+    ]
+  },
+  {
+    "tag": "college_university_emergency",
+    "patterns": [
+      "What should I do in case of an emergency?",
+      "Who can I contact for emergencies at the college?",
+      "How is emergency response handled in the university?",
+      "Is there any protocol for emergencies?",
+      "Where can I find help during an emergency?"
+    ],
+    "responses": [
+      "If you face an emergency, please reach out to your department advisor or the nearest faculty member. They are there to support you and ensure your safety and well-being.",
+      "In case of an emergency, contact the nearest faculty or staff member for assistance. Emergency response teams are always on standby to help you.",
+      "In the event of an emergency, please follow the college's emergency protocols and contact designated personnel for immediate assistance."
+    ]
+  },
+  {
+  "tag": "thanks",
+  "patterns": [
+    "Thank you",
+    "Thanks",
+    "Thank you so much",
+    "Thanks a lot",
+    "I appreciate your help",
+    "Thank you for your assistance",
+    "Thanks for the information",
+    "Thanks for your support",
+    "Thank you for helping me",
+    "I’m grateful for your help",
+    "Thanks for your guidance",
+    "Thank you for your reply"
+  ],
+  "responses": [
+    "You're welcome! I'm here to help.",
+    "No problem! If you have any more questions, feel free to ask.",
+    "Glad to assist! Let me know if there's anything else you need.",
+    "You're very welcome! Don't hesitate to reach out for more help.",
+    "I'm happy to help! If you have more queries, just let me know."
+  ]
+}
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+]
+}

@@ -1,0 +1,1808 @@
+{
+
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Good morning", "Good evening", "Hey", "How are you?", "Is anyone there?", "Greetings"],
+        "responses": ["Hello! How can I assist you today?", "Hi there! How can I help you?", "Greetings! What can I do for you?"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye", "Have a nice day", "Take care", "Catch you later"],
+        "responses": ["Goodbye! Have a great day!", "See you later!", "Take care and have a nice day!"]
+      },
+      {
+          "tag": "synonyms",
+          "patterns": [
+            "What is the synonym of .*?",
+            "what is synonym .*?",
+            "What synonym .*?"
+          ],
+          "responses": "A synonym is a word that has the same or nearly the same meaning as another word. Can you try to answer before I explain?"
+      },
+      {
+          "tag": "antonyms",
+          "patterns": "What is the antonym of .*?",
+          "responses": "An antonym is a word that has the opposite meaning of another. Let's find the right one together!"
+      },
+      {
+          "tag": "grammar_error",
+          "patterns": "Identify the grammatical error in .*",
+          "responses": "Look for mistakes in subject-verb agreement, tense, or word order. Let me know your thoughts!"
+      },
+      {
+          "tag": "active_passive",
+          "patterns": "Convert this sentence to passive voice: .*",
+          "responses": "To convert to passive voice, focus on the object becoming the subject. Need help?"
+      },
+      {
+          "tag": "direct_indirect",
+          "patterns": "Convert this sentence to indirect speech: .*",
+          "responses": "In indirect speech, make adjustments for tense, pronouns, and time expressions. Let's try!"
+      },
+      {
+          "tag": "poetry_analysis",
+          "patterns": "What is the theme of the poem .*?",
+          "responses": "The theme reflects the central idea or message of the poem. What do you think it could be?"
+      },
+      {
+          "tag": "comprehension",
+          "patterns": "What is the main idea of the passage .*?",
+          "responses": "The main idea summarizes the essence of the passage. What stands out to you?"
+      },
+      {
+          "tag": "idioms",
+          "patterns": "What does the idiom .* mean?",
+          "responses": "Idioms have figurative meanings. Let's decode this one together!"
+      },
+      {
+          "tag": "proverbs",
+          "patterns": "Explain the meaning of the proverb .*",
+          "responses": "Proverbs often contain moral lessons. Can you relate it to a real-life example?"
+      },
+      {
+          "tag": "literature",
+          "patterns": "Who is the author of .*?",
+          "responses": "Authors add depth to their work through personal styles. Do you recognize the writing?"
+      },
+      {
+        "tag": "indian_independence",
+        "patterns": [
+          "Who was the leader of the Quit India Movement?",
+          "Name the leader of the Quit India Movement.",
+          "Who initiated the Quit India Movement?"
+        ],
+        "responses": [
+          "Mahatma Gandhi was the leader of the Quit India Movement in 1942.",
+          "The Quit India Movement was led by Mahatma Gandhi."
+        ]
+      },
+      {
+        "tag": "french_revolution",
+        "patterns": [
+          "What was the main cause of the French Revolution?",
+          "Why did the French Revolution happen?",
+          "Explain the causes of the French Revolution."
+        ],
+        "responses": [
+          "The French Revolution was primarily caused by social inequality, economic hardship, and the influence of Enlightenment ideas."
+        ]
+      },
+      {
+        "tag": "climate_change",
+        "patterns": [
+          "What are the main effects of climate change?",
+          "Explain the effects of climate change.",
+          "How does climate change affect the environment?"
+        ],
+        "responses": [
+          "Climate change leads to rising temperatures, sea level rise, extreme weather events, and loss of biodiversity."
+        ]
+      },
+      {
+        "tag": "democracy",
+        "patterns": [
+          "What is democracy?",
+          "Define democracy.",
+          "Can you explain what democracy means?"
+        ],
+        "responses": [
+          "Democracy is a system of government where the citizens exercise power by voting."
+        ]
+      },
+      {
+        "tag": "industries",
+        "patterns": [
+          "Name the types of industries based on raw materials.",
+          "What are the types of industries based on raw materials?",
+          "List the types of industries according to raw materials."
+        ],
+        "responses": [
+          "The types of industries based on raw materials are agro-based industries, mineral-based industries, and forest-based industries."
+        ]
+      },
+      {
+        "tag": "globalization",
+        "patterns": [
+          "What is globalization?",
+          "Define globalization.",
+          "Explain globalization."
+        ],
+        "responses": [
+          "Globalization refers to the process of increasing interconnection and interdependence of countries in terms of trade, culture, and communication."
+        ]
+      },
+      {
+        "tag": "natural_resources",
+        "patterns": [
+          "What are natural resources?",
+          "Define natural resources.",
+          "Explain natural resources with examples."
+        ],
+        "responses": [
+          "Natural resources are materials or substances occurring in nature, such as water, minerals, forests, and fossil fuels, which can be used for economic gain."
+        ]
+      },
+      {
+        "tag": "sustainable_development",
+        "patterns": [
+          "What is sustainable development?",
+          "Define sustainable development.",
+          "Explain the concept of sustainable development."
+        ],
+        "responses": [
+          "Sustainable development is development that meets the needs of the present without compromising the ability of future generations to meet their own needs."
+        ]
+      },
+      {
+        "tag": "indian_constitution",
+        "patterns": [
+          "When was the Indian Constitution adopted?",
+          "What is the adoption date of the Indian Constitution?",
+          "When was the Constitution of India adopted?"
+        ],
+        "responses": [
+          "The Indian Constitution was adopted on 26th November 1949 and came into effect on 26th January 1950."
+        ]
+      },
+      {
+        "tag": "population_growth",
+        "patterns": [
+          "What are the causes of population growth?",
+          "Explain the causes of population growth.",
+          "Why does population growth happen?"
+        ],
+        "responses": [
+          "Population growth is caused by factors such as high birth rates, low mortality rates, improved healthcare, and lack of access to family planning."
+        ]
+      },
+      {
+        "tag": "gravitation",
+        "patterns": [
+          "What is Newton's law of gravitation?",
+          "Explain universal law of gravitation.",
+          "Can you define Newton's gravitation law?"
+        ],
+        "responses": [
+          "Newton's law of gravitation states that every particle in the universe attracts every other particle with a force which is directly proportional to the product of their masses and inversely proportional to the square of the distance between them."
+        ]
+      },
+      {
+        "tag": "periodic_table",
+        "patterns": [
+          "What is the periodic table?",
+          "Define the periodic table.",
+          "What do you mean by periodic table?"
+        ],
+        "responses": [
+          "The periodic table is a tabular arrangement of chemical elements, ordered by their atomic number, electron configuration, and recurring chemical properties."
+        ]
+      },
+      {
+        "tag": "photosynthesis",
+        "patterns": [
+          "What is photosynthesis?",
+          "Explain the process of photosynthesis.",
+          "How do plants make their food?"
+        ],
+        "responses": [
+          "Photosynthesis is the process by which green plants use sunlight, carbon dioxide, and water to produce glucose and oxygen."
+        ]
+      },
+      {
+        "tag": "electricity",
+        "patterns": [
+          "What is Ohm's law?",
+          "Explain Ohm's law.",
+          "Define Ohm's law in simple terms."
+        ],
+        "responses": [
+          "Ohm's law states that the current through a conductor between two points is directly proportional to the voltage across the two points, provided the temperature remains constant."
+        ]
+      },
+      {
+        "tag": "carbon_compounds",
+        "patterns": [
+          "What are carbon compounds?",
+          "Explain about organic compounds.",
+          "What is meant by carbon-based compounds?"
+        ],
+        "responses": [
+          "Carbon compounds are chemical substances that contain carbon atoms bonded to other elements. Organic compounds, like hydrocarbons, are a major class of carbon compounds."
+        ]
+      },
+      {
+        "tag": "evolution",
+        "patterns": [
+          "What is evolution?",
+          "Explain the concept of evolution.",
+          "What do you mean by biological evolution?"
+        ],
+        "responses": [
+          "Evolution is the process by which species of organisms undergo gradual changes over generations through natural selection, leading to the development of new species."
+        ]
+      },
+      {
+        "tag": "acids_bases",
+        "patterns": [
+          "What are acids and bases?",
+          "Define acids and bases.",
+          "Can you explain the difference between acids and bases?"
+        ],
+        "responses": [
+          "Acids are substances that release hydrogen ions (H+) in a solution, while bases release hydroxide ions (OH−). For example, HCl is an acid, and NaOH is a base."
+        ]
+      },
+      {
+        "tag": "magnetic_effects",
+        "patterns": [
+          "What is electromagnetic induction?",
+          "Explain electromagnetic induction.",
+          "Define the principle of electromagnetic induction."
+        ],
+        "responses": [
+          "Electromagnetic induction is the process of generating an electric current in a conductor by changing the magnetic field around it."
+        ]
+      },
+      {
+        "tag": "human_body",
+        "patterns": [
+          "What is the function of the heart?",
+          "Explain how the heart works.",
+          "What does the human heart do?"
+        ],
+        "responses": [
+          "The human heart pumps oxygenated blood to the body and deoxygenated blood to the lungs. It plays a crucial role in maintaining blood circulation."
+        ]
+      },
+      {
+        "tag": "energy",
+        "patterns": [
+          "What are renewable energy sources?",
+          "Define renewable energy sources.",
+          "Can you explain what renewable energy is?"
+        ],
+        "responses": [
+          "Renewable energy sources are natural resources that can be replenished over time, such as solar, wind, and hydroelectric power."
+        ]
+      },
+      {
+        "tag": "quadratic_equation",
+        "patterns": "What is the formula to solve a quadratic equation?",
+        "responses": "The formula to solve a quadratic equation ax^2 + bx + c = 0 is x = (-b ± √(b² - 4ac)) / 2a."
+      },
+      {
+        "tag": "pythagoras_theorem",
+        "patterns": "Can you explain the Pythagoras theorem?",
+        "responses": "The Pythagoras theorem states that in a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides: a² + b² = c²."
+      },
+      {
+        "tag": "area_circle",
+        "patterns": "What is the formula for the area of a circle?",
+        "responses": "The formula for the area of a circle is A = πr², where r is the radius."
+      },
+      {
+        "tag": "surface_area_cylinder",
+        "patterns": "What is the formula for the total surface area of a cylinder?",
+        "responses": "The total surface area of a cylinder is given by 2πr(h + r), where r is the radius and h is the height."
+      },
+      {
+        "tag": "simple_interest",
+        "patterns": "What is the formula for simple interest?",
+        "responses": "The formula for simple interest is SI = (P × R × T) / 100, where P is the principal amount, R is the rate of interest, and T is the time."
+      },
+      {
+        "tag": "distance_formula",
+        "patterns": "What is the distance formula in coordinate geometry?",
+        "responses": "The distance formula is d = √((x2 - x1)² + (y2 - y1)²), where (x1, y1) and (x2, y2) are two points in a plane."
+      },
+      {
+        "tag": "volume_cone",
+        "patterns": "How do you calculate the volume of a cone?",
+        "responses": "The volume of a cone is given by V = (1/3)πr²h, where r is the radius of the base and h is the height."
+      },
+      {
+        "tag": "arithmetic_progression",
+        "patterns": "What is the nth term formula for an arithmetic progression?",
+        "responses": "The nth term of an arithmetic progression is an = a + (n - 1)d, where a is the first term and d is the common difference."
+      },
+      {
+        "tag": "trigonometric_ratios",
+        "patterns": "Can you define the basic trigonometric ratios?",
+        "responses": "The basic trigonometric ratios are: sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse, and tan θ = opposite/adjacent."
+      },
+      {
+        "tag": "surface_area_sphere",
+        "patterns": "What is the formula for the surface area of a sphere?",
+        "responses": "The formula for the surface area of a sphere is 4πr², where r is the radius."
+      },
+      {
+        "tag": "thanks",
+        "patterns": [
+          "Thank you",
+          "Thanks",
+          "Thank you so much",
+          "Thanks a lot",
+          "I appreciate your help",
+          "Thank you for your assistance",
+          "Thanks for the information",
+          "Thanks for your support",
+          "Thank you for helping me",
+          "I’m grateful for your help",
+          "Thanks for your guidance",
+          "Thank you for your reply"
+        ],
+        "responses": [
+          "You're welcome! I'm here to help.",
+          "No problem! If you have any more questions, feel free to ask.",
+          "Glad to assist! Let me know if there's anything else you need.",
+          "You're very welcome! Don't hesitate to reach out for more help.",
+          "I'm happy to help! If you have more queries, just let me know."
+        ]
+      },
+      {
+        "tag": "academic_challenges",
+        "patterns": [
+          "I'm struggling with my studies.",
+          "I find it hard to focus on my schoolwork.",
+          "I don't understand the lessons.",
+          "I'm failing my classes.",
+          "How can I improve my grades?",
+          "Why is studying so hard for me?",
+          "I feel like I'm not good enough in school.",
+          "I hate studying.",
+          "How do I prepare for exams?",
+          "I'm always distracted while studying.",
+          "What should I do if I can't understand a subject?",
+          "I feel like giving up on school.",
+          "My grades are too low.",
+          "How do I get better at math?",
+          "Studying makes me feel tired.",
+          "I don't know how to study effectively.",
+          "What are some study tips?",
+          "How can I balance school and my personal life?",
+          "I have no motivation to study.",
+          "I'm afraid of failing my exams."
+        ],
+        "responses": [
+          "Struggling is a sign that you're trying, and that's a good thing! Let’s break your study sessions into smaller, focused blocks to make it manageable.",
+          "It’s okay to ask for help. Talk to your teacher or a friend who understands the subject better.",
+          "Remember, practice makes progress. Start with the basics and build up from there.",
+          "Focus on progress, not perfection. Celebrate small achievements!",
+          "You are capable of more than you think. Let’s set up a study schedule together.",
+          "Find a quiet place and remove distractions. Studying in a clean environment helps improve focus.",
+          "Use tools like flashcards, diagrams, or videos to make learning fun and interactive.",
+          "Don’t compare yourself to others. Your journey is unique.",
+          "Mistakes are proof that you are learning. Don’t be afraid to make them.",
+          "Ask your teacher for extra resources or exercises to improve.",
+          "Break your tasks into smaller goals. Accomplishing each one will build your confidence.",
+          "Remember why you started. What’s your dream? Let it motivate you.",
+          "Take care of your health. A balanced diet, proper sleep, and exercise can boost your focus.",
+          "Reward yourself for completing tasks. It keeps you motivated.",
+          "Set realistic goals for each study session. Achieving them will feel rewarding.",
+          "Learn from your failures and use them as stepping stones to success.",
+          "Create a vision board with your goals and dreams. Let it inspire you daily.",
+          "Remember, every expert was once a beginner. Keep going!",
+          "You are not alone. Many students feel the same way, and they succeed by persisting.",
+          "School is just one step in your journey. Keep pushing forward!"
+        ]
+      },
+      {
+        "tag": "peer_pressure",
+        "patterns": [
+          "I feel pressured to fit in with my friends.",
+          "How do I deal with negative influences at school?",
+          "My friends make fun of me for studying.",
+          "What if I lose my friends by focusing on school?",
+          "How do I say no to bad habits?",
+          "I want to be popular, but I also want to do well in school.",
+          "What if my friends don’t support my goals?",
+          "I feel like I have to act differently to be accepted.",
+          "How do I stay true to myself around my friends?",
+          "I get teased for being a 'nerd.'",
+          "My friends want me to skip school.",
+          "How do I deal with peer pressure?",
+          "Should I change myself to fit in?",
+          "What if I don’t have any friends?",
+          "I feel lonely because I’m different.",
+          "How can I be confident in my choices?",
+          "I’m scared of being judged by my friends.",
+          "What if I’m not cool enough?",
+          "How do I stay focused on school despite distractions?",
+          "What if I lose my friends because of my decisions?"
+        ],
+        "responses": [
+          "True friends will accept and support you for who you are.",
+          "Saying no is a form of self-respect. Stick to your values.",
+          "Focus on your goals. Your success will inspire others.",
+          "It’s better to have a few good friends than many fake ones.",
+          "Surround yourself with people who uplift and encourage you.",
+          "Remember, being true to yourself is more important than fitting in.",
+          "You are unique and special in your own way. Embrace it!",
+          "Standing up for what’s right makes you a leader, not a follower.",
+          "Good habits lead to long-term success, while bad habits can hold you back.",
+          "If friends tease you for studying, they’re not real friends.",
+          "Success is the best way to silence critics. Keep working hard.",
+          "Your true friends will support your dreams, not drag you down.",
+          "It’s okay to walk away from negative influences. Your future matters.",
+          "You don’t have to be popular to be happy. Focus on being kind and genuine.",
+          "Loneliness is temporary. Seek out people who share your interests.",
+          "Confidence comes from believing in yourself. You’ve got this!",
+          "Choose friends who inspire you to be the best version of yourself.",
+          "Peer pressure loses its power when you stay strong in your beliefs.",
+          "Your decisions define your future. Make choices you’re proud of.",
+          "Success doesn’t require approval from everyone. Stay focused!"
+        ]
+      },
+      {
+        "tag": "time_management",
+        "patterns": [
+          "How do I manage my time effectively?",
+          "I feel like I don't have enough time for school and fun.",
+          "What are some time management tips?",
+          "I always procrastinate. How do I stop?",
+          "How can I balance studying and hobbies?",
+          "I have so much homework and no time to complete it.",
+          "Why can't I stay on schedule?",
+          "How do I prioritize my tasks?",
+          "I waste too much time on social media.",
+          "How can I create a study plan?",
+          "I keep missing deadlines. What should I do?",
+          "How do I stop getting distracted?",
+          "I have no time for relaxation or self-care.",
+          "Can I manage school and part-time work?",
+          "How do I stick to my daily routine?",
+          "Why do I feel overwhelmed with time?",
+          "How can I study smarter, not harder?",
+          "I keep postponing my assignments.",
+          "How do I deal with a busy schedule?",
+          "How can I stay organized in school?"
+        ],
+        "responses": [
+          "Start by making a to-do list and prioritize tasks based on importance.",
+          "Use a planner or calendar to schedule your activities.",
+          "Break your study time into short, focused sessions with breaks in between.",
+          "Avoid multitasking; focus on one task at a time.",
+          "Limit distractions by keeping your phone away while studying.",
+          "Set specific goals for each study session.",
+          "Remember, it's okay to say no to things that waste your time.",
+          "Plan your day the night before to reduce morning stress.",
+          "Take regular breaks to recharge your mind.",
+          "Allocate time for both work and relaxation. Balance is key.",
+          "Reward yourself for completing tasks to stay motivated.",
+          "Use tools like timers to stay on track with your schedule.",
+          "Start with the hardest tasks when your energy levels are high.",
+          "Stay flexible but disciplined with your schedule.",
+          "Don't aim for perfection; aim for progress.",
+          "Reflect on how you spend your time and make adjustments.",
+          "Delegate tasks when possible to lighten your load.",
+          "Learn to recognize when you're wasting time and redirect your focus.",
+          "Stay consistent with your routine; it builds good habits.",
+          "Celebrate your small wins to keep up your motivation."
+        ]
+      },
+      {
+        "tag": "financial_struggles",
+        "patterns": [
+          "I can't afford school supplies.",
+          "My family is struggling financially.",
+          "I want to support my family, but school takes too much time.",
+          "How can I study with limited resources?",
+          "I feel bad asking my parents for money.",
+          "What if I can't pay for school fees?",
+          "I need to work to help my family.",
+          "How can I manage my expenses as a student?",
+          "Are there scholarships I can apply for?",
+          "How do I balance work and school?",
+          "I can't afford to go on school trips.",
+          "Is there free study material I can use?",
+          "I want to quit school to help my family.",
+          "Where can I find financial aid?",
+          "How do I talk to my teacher about my financial situation?",
+          "I can't focus on school because of money problems.",
+          "What if I can't afford college?",
+          "Can I get a part-time job while studying?",
+          "How can I save money as a student?",
+          "Are there community programs to help students like me?"
+        ],
+        "responses": [
+          "Talk to your school about financial aid or scholarships available for students.",
+          "Look for part-time jobs that fit into your school schedule.",
+          "Focus on using free or low-cost resources for studying, like libraries or online materials.",
+          "Reach out to local community programs that assist students in need.",
+          "Ask your teacher or counselor for help; they may have resources for you.",
+          "Consider applying for government-funded education programs.",
+          "Start budgeting to manage your expenses wisely.",
+          "Seek scholarships or grants based on your academic performance or talents.",
+          "Remember, your education is an investment in your future. Stay focused.",
+          "Reach out to NGOs or organizations that provide support for students.",
+          "Cut unnecessary expenses and focus on essentials.",
+          "Talk to your parents openly about financial concerns and work together on solutions.",
+          "Remember, there is no shame in asking for help when you need it.",
+          "Use free online courses and study materials to enhance your learning.",
+          "Prioritize your education; it will help you earn more in the long run.",
+          "Check if your school has a fund for students facing financial difficulties.",
+          "Be resourceful and creative with what you have.",
+          "Participate in free community events and workshops to gain knowledge.",
+          "Remember, challenges today will lead to a brighter tomorrow.",
+          "Stay positive and look for opportunities to grow despite financial struggles."
+        ]
+      },
+      {
+        "tag": "mental_health",
+        "patterns": [
+          "I feel stressed all the time.",
+          "How do I manage anxiety before exams?",
+          "I can't sleep because of school stress.",
+          "I'm feeling overwhelmed by everything.",
+          "I think I'm depressed.",
+          "School is making me unhappy.",
+          "I feel like giving up.",
+          "How can I relax my mind?",
+          "What should I do when I feel sad?",
+          "I don't feel good enough.",
+          "I feel lonely and disconnected.",
+          "How can I stay positive during tough times?",
+          "My friends don't understand my problems.",
+          "I feel like no one cares about me.",
+          "How do I deal with school pressure?",
+          "I'm too anxious to participate in class.",
+          "I feel like a failure.",
+          "What are some self-care tips for students?",
+          "How can I cope with emotional challenges?",
+          "I feel hopeless about the future."
+        ],
+        "responses": [
+          "It’s okay to feel overwhelmed; take one step at a time.",
+          "Practice deep breathing exercises to calm your mind.",
+          "Talk to someone you trust about your feelings.",
+          "Remember, asking for help is a sign of strength, not weakness.",
+          "Take short breaks to recharge when you feel stressed.",
+          "Engage in activities that make you happy, like hobbies or sports.",
+          "Try journaling your thoughts to release emotions.",
+          "Focus on things you can control, and let go of what you can’t.",
+          "Set realistic goals and celebrate small achievements.",
+          "Remember, you are more than your grades.",
+          "Surround yourself with supportive friends and family.",
+          "Take care of your body; exercise and eat healthy foods.",
+          "Seek professional help if you feel overwhelmed.",
+          "You are not alone; many people care about you.",
+          "Focus on your strengths and what you do well.",
+          "Learn to forgive yourself for mistakes; they are part of learning.",
+          "Take one day at a time and be patient with yourself.",
+          "Do something kind for someone else; it can lift your spirits.",
+          "Stay hopeful; tough times don’t last forever.",
+          "You are capable, strong, and worthy of happiness."
+        ]
+      },
+      {
+        "tag": "bullying",
+        "patterns": [
+          "I'm being bullied at school.",
+          "How do I deal with bullies?",
+          "Someone keeps making fun of me.",
+          "I feel unsafe at school because of bullying.",
+          "What should I do if I'm being harassed?",
+          "My classmates tease me all the time.",
+          "I feel scared to go to school.",
+          "No one listens to me when I report bullying.",
+          "I feel alone because of bullying.",
+          "The bullies won’t leave me alone.",
+          "How do I stand up to bullies?",
+          "Why do people bully others?",
+          "I’m being cyberbullied.",
+          "Should I fight back against bullies?",
+          "The bullying is making me feel worthless.",
+          "I don’t want to go to school because of bullying.",
+          "How can I help someone else being bullied?",
+          "The teachers don’t take bullying seriously.",
+          "What should I say to a bully?",
+          "How do I rebuild my confidence after being bullied?"
+        ],
+        "responses": [
+          "You are not alone. Talk to a trusted adult or teacher immediately.",
+          "Standing up for yourself doesn’t mean fighting. Stay calm and confident.",
+          "Bullies often act out because they feel insecure. Don’t take their words to heart.",
+          "Document the incidents and share them with school authorities.",
+          "Focus on the positive aspects of your life and surround yourself with supportive people.",
+          "You have every right to feel safe at school. Don’t hesitate to ask for help.",
+          "Ignore the bully's words and show them that their actions don’t affect you.",
+          "Be kind to yourself and remember that bullying is not your fault.",
+          "Build your self-confidence by focusing on your strengths and achievements.",
+          "If you see someone being bullied, stand by them or report it to a teacher.",
+          "Use humor to defuse situations when it’s safe to do so.",
+          "Online bullying is serious. Block and report the bully immediately.",
+          "Seek support groups or counseling to share your experiences and heal.",
+          "Practice assertive communication. It shows bullies you’re not intimidated.",
+          "Remember, what bullies say doesn’t define you. You are stronger than their words.",
+          "Focus on your goals and dreams. Bullies can’t stop your progress.",
+          "Make friends with kind and supportive people who uplift you.",
+          "If the school doesn’t take action, involve your parents or guardians.",
+          "Bullies thrive on reactions. Stay calm and walk away.",
+          "Your worth is not determined by others’ opinions. Believe in yourself."
+        ]
+      },
+      {
+        "tag": "career_guidance",
+        "patterns": [
+          "What should I do after school?",
+          "How do I choose a career?",
+          "I don’t know what I want to be when I grow up.",
+          "What if I pick the wrong career?",
+          "How do I find my passion?",
+          "Should I focus on college or a trade school?",
+          "How do I prepare for my future career?",
+          "What jobs will be in demand in the future?",
+          "How can I explore different career options?",
+          "I feel pressured to pick a career quickly.",
+          "What are some good career options for me?",
+          "I want to follow my dreams, but I’m scared to fail.",
+          "Can I change careers later in life?",
+          "What if my parents don’t support my career choice?",
+          "How do I balance my interests and practicality in choosing a career?",
+          "How do I stay motivated while working toward my goals?",
+          "Is it okay to not know my career path yet?",
+          "How can I improve my skills for a specific career?",
+          "What if my dream job doesn’t pay well?",
+          "How do I network and build connections for my career?"
+        ],
+        "responses": [
+          "Take your time to explore your interests and strengths. There’s no rush.",
+          "Talk to a guidance counselor or mentor who can help you discover your options.",
+          "Remember, you can always adjust your career path as you grow and learn.",
+          "Focus on what makes you happy and fulfilled, not just what pays the most.",
+          "Research different fields and try internships or part-time jobs to gain experience.",
+          "Don’t be afraid to ask for advice from people working in fields you’re interested in.",
+          "Write down your skills and passions. They can guide your career choice.",
+          "Every step you take teaches you something valuable. Keep moving forward.",
+          "Your career is a journey, not a destination. You don’t have to have it all figured out now.",
+          "Passion is important, but so is adaptability. Stay open to opportunities.",
+          "Success comes from persistence and learning, not from avoiding failure.",
+          "Parents mean well, but it’s your life. Have an open conversation about your dreams.",
+          "It’s okay to feel uncertain. Most people find their path through trial and error.",
+          "Set small goals that lead you closer to your long-term dreams.",
+          "Take online courses, read books, or attend workshops to build your skills.",
+          "Networking is key. Attend events or reach out to professionals on platforms like LinkedIn.",
+          "Remember, career satisfaction is about more than money. Fulfillment matters too.",
+          "Believe in yourself and your ability to achieve great things.",
+          "Stay curious and keep learning. It will open doors to unexpected opportunities.",
+          "You have the potential to do amazing things. Keep exploring and growing."
+        ]
+      },
+      {
+        "tag": "parental_expectations",
+        "patterns": [
+          "My parents want me to study something I don’t like.",
+          "How do I make my parents understand my dreams?",
+          "I feel pressured to meet my parents' expectations.",
+          "What if I disappoint my parents?",
+          "My parents compare me to others all the time.",
+          "How do I deal with strict parents?",
+          "My parents don’t support my career choice.",
+          "I feel like I’m living my parents' dream, not mine.",
+          "How do I balance my goals with my parents' expectations?",
+          "What if my parents don’t believe in me?",
+          "I feel like I’m not good enough for my parents.",
+          "How do I explain my passion to my parents?",
+          "My parents want me to follow the family tradition.",
+          "How do I deal with constant criticism from my parents?",
+          "What should I do if my parents don’t listen to me?",
+          "I’m afraid of failing because of my parents’ high standards.",
+          "How do I gain my parents’ trust?",
+          "My parents are overly controlling about my studies.",
+          "How do I make my parents proud while staying true to myself?",
+          "What if my parents never understand my dreams?"
+        ],
+        "responses": [
+          "Communicate openly and respectfully with your parents about your dreams.",
+          "Show them that you’re serious about your goals by creating a plan.",
+          "Your parents want what’s best for you, but it’s okay to have your own dreams.",
+          "Explain how pursuing your passion can lead to success and happiness.",
+          "Balance their expectations with your own goals. Compromise when possible.",
+          "Ask for their guidance while making it clear that it’s your life to live.",
+          "Be patient. It may take time for your parents to understand your perspective.",
+          "Show them examples of successful people in your chosen field.",
+          "Respect their concerns but stay firm in your commitment to your dreams.",
+          "Remember, your worth isn’t defined by comparisons. You are unique.",
+          "Prove your dedication through hard work and results.",
+          "Find common ground with your parents and build from there.",
+          "Thank your parents for their support while expressing your own aspirations.",
+          "It’s okay to set boundaries with love and respect.",
+          "Keep reminding yourself that your happiness matters too.",
+          "Your dreams and their love can coexist. Work together to find a solution.",
+          "Focus on becoming the best version of yourself, not just meeting expectations.",
+          "Build trust by being honest and consistent with your actions.",
+          "Don’t give up on your dreams, even if it takes time to win their support.",
+          "Your future is yours to shape. Believe in your ability to succeed."
+        ]
+      },
+      {
+        "tag": "fees",
+        "patterns": [
+          "What is the school fee?",
+          "Tell me about the fees for this school.",
+          "How much is the tuition fee for school?",
+          "What is the annual school fee?",
+          "How much do I have to pay for school?",
+          "What is the cost of education here?",
+          "How much is the monthly fee for school?",
+          "How much should I pay every year?",
+          "What is the total fee for a year?",
+          "What is the fee for grade 10?",
+          "What is the fee for grade 11?",
+          "What is the fee for grade 12?",
+          "How much is the fee for higher secondary?",
+          "What will be the cost of school education?",
+          "What is the fee for admission?",
+          "What are the hostel fees for school students?",
+          "How much is the sports or activity fee?",
+          "What is the fee structure for the school?",
+          "How much will it cost to study here?",
+          "What will be the total price for the year?"
+        ],
+        "responses": [
+          "The fee structure varies depending on the grade. For grade 10, it is ₹15,000 per year. For grades 11 and 12, it is ₹18,000 per year. Hostel fees, if applicable, are ₹20,000 per year."
+        ]
+      },
+      {
+        "tag": "fees_science_stream",
+        "patterns": [
+          "What is the fee structure for the science stream?",
+          "Tell me about the fees for science subjects.",
+          "How much is the tuition for the science stream?",
+          "What is the annual fee for the science stream?",
+          "What is the cost for science students?",
+          "How much do I need to pay for physics, chemistry, and biology?",
+          "What is the fee for studying math and science?",
+          "What are the fees for grade 11 and 12 science?",
+          "How much is the fee for science students?",
+          "How much do I need to pay for science labs?",
+          "What are the charges for science subjects?",
+          "How much will it cost to study science?",
+          "What is the fee for biology and math in school?",
+          "What is the fee for studying computer science in school?",
+          "What are the laboratory charges for science students?",
+          "What is the total fee for science students?",
+          "What will be the cost for a science student per year?",
+          "How much is the cost for science stream books and labs?",
+          "What is the fee for higher secondary science?",
+          "How much do science students pay annually?"
+        ],
+        "responses": [
+          "The fee for the science stream is ₹18,000 per year, including laboratory charges. Additional fees for specialized subjects like computer science are ₹2,000 annually."
+        ]
+      },
+      {
+        "tag": "fees_commerce_stream",
+        "patterns": [
+          "What is the fee structure for the commerce stream?",
+          "Tell me about the fees for commerce students.",
+          "How much is the tuition for commerce students?",
+          "What is the annual fee for commerce?",
+          "What is the fee for studying commerce in grades 11 and 12?",
+          "How much do I need to pay for commerce?",
+          "What are the fees for commerce subjects?",
+          "What is the cost of studying business studies and accounting?",
+          "How much is the fee for commerce and economics?",
+          "How much do commerce students pay annually?",
+          "What is the total fee for commerce students?",
+          "What is the fee for commerce stream books?",
+          "What are the charges for commerce education?",
+          "How much is the cost of studying commerce subjects?",
+          "What will be the cost for commerce students per year?",
+          "How much do I have to pay for commerce stream classes?",
+          "What is the fee structure for commerce in school?",
+          "What is the price for studying commerce in higher secondary?",
+          "How much does commerce education cost?",
+          "What is the fee for commerce stream in this school?"
+        ],
+        "responses": [
+          "The fee for the commerce stream is ₹16,000 per year, covering all subjects, including business studies, economics, and accounting."
+        ]
+      },
+      {
+        "tag": "exam_fee",
+        "patterns": [
+          "What is the exam fee for grade 10?",
+          "What is the exam fee for grade 11?",
+          "What is the exam fee for grade 12?",
+          "How much do I need to pay for board exams?",
+          "What is the fee for the semester exams?",
+          "How much is the exam fee per subject?",
+          "What is the exam fee for higher secondary students?",
+          "How much is the fee for practical exams?",
+          "What is the payment for internal exams?",
+          "What are the charges for external exams?",
+          "Can you provide the exam fee details?",
+          "What is the total fee for exams this year?",
+          "How much do students pay for board exams?",
+          "What is the cost of practical exams?",
+          "What is the exam payment structure?",
+          "How much is the annual exam fee?",
+          "What is the cost of exam registration?",
+          "How much is the exam fee for supplementary exams?",
+          "What is the fee for repeat exams?",
+          "How much do school exams cost per subject?"
+        ],
+        "responses": [
+          "The exam fee for internal assessments is ₹500 per semester. For board exams in grades 10, 11, and 12, the fee is ₹1,000 per subject. Practical exam fees are ₹300 per subject."
+        ]
+      },
+      {
+        "tag": "hostel_fee",
+        "patterns": [
+          "What is the hostel fee for school students?",
+          "How much do I need to pay for the hostel?",
+          "What is the cost of staying in the hostel?",
+          "What are the hostel charges?",
+          "How much is the hostel fee annually?",
+          "What is the monthly hostel fee?",
+          "What is the fee for boarding in school?",
+          "How much does it cost to stay in the school hostel?",
+          "What is the hostel accommodation fee?",
+          "How much do students pay for the hostel?",
+          "What are the charges for meals in the hostel?",
+          "How much is the fee for hostel facilities?",
+          "What is the cost for hostel and food?",
+          "How much do I need to pay for hostel room rent?",
+          "What is the fee for hostel utilities?",
+          "What is the price for staying in the school dormitory?",
+          "What are the fees for boarding and lodging in school?",
+          "How much does the hostel cost per semester?",
+          "What is the total hostel fee for a year?",
+          "What is the fee for hostel accommodation in grades 10, 11, and 12?"
+        ],
+        "responses": [
+          "The hostel fee for school students is ₹20,000 per year, including meals and utilities. Additional charges for personal items may apply."
+        ]
+      },
+      {
+        "tag": "career_guidance",
+        "patterns": [
+          "What career options are available for me?",
+          "How do I choose the right career?",
+          "What should I do after completing high school?",
+          "What are the best career choices after grade 12?",
+          "Can you help me choose a career?",
+          "How do I find my passion for a career?",
+          "Which career is in demand for the future?",
+          "What are the most popular career paths?",
+          "What career should I choose based on my strengths?",
+          "What are the options after completing grade 12?",
+          "How do I prepare for a successful career?",
+          "What are the highest paying careers?",
+          "What are the best career paths for students?",
+          "Should I go for a job after grade 12 or pursue further studies?",
+          "What career suits my personality?",
+          "How do I identify my ideal career?",
+          "What career paths are available in the science stream?",
+          "How can I make a good career choice?",
+          "How can I get better career opportunities?",
+          "What qualifications do I need for a successful career?"
+        ],
+        "responses": [
+          "Choosing the right career is essential. Identify your interests, strengths, and passion. You can explore fields like engineering, medical science, arts, or commerce depending on your interests.",
+          "Career guidance is crucial for future success. Consider what subjects excite you and talk to professionals in different fields. Research and internships can give you insight into potential careers.",
+          "The best way to choose a career is by evaluating your interests and strengths. Whether you want to become an engineer, doctor, teacher, or businessperson, the right choice will motivate you.",
+          "After completing high school, you can pursue higher education or vocational training. You should focus on fields that align with your passions and long-term goals.",
+          "It's essential to consider both your passion and the skills you excel at. Seek guidance from a career counselor to explore various options that suit your abilities.",
+          "If you're unsure about your career path, take career aptitude tests or try job shadowing to get a better idea of what you might enjoy doing.",
+          "With the rapidly changing job market, fields like AI, data science, and cybersecurity are in high demand. However, don't forget to pursue what you enjoy most.",
+          "Popular career paths include medicine, engineering, law, business management, and IT. But, remember to focus on your passion and skills rather than just popularity.",
+          "The best career for you is the one that aligns with your passion. If you're good at math, engineering or computer science could be a great fit. If you love helping people, consider healthcare.",
+          "Consider what excites you. If you are passionate about technology, go for IT-related fields. If you enjoy problem-solving, engineering could be your path.",
+          "Explore various career options after grade 12 like pursuing a degree in engineering, arts, commerce, or vocational training.",
+          "Preparing for a career involves education, gaining skills, and sometimes internships. Networking is key to learning about job opportunities and building a professional network.",
+          "Consider careers in technology, healthcare, business, or the creative fields. All of these have good earning potential and offer opportunities for growth.",
+          "There are many rewarding careers like medicine, engineering, teaching, and more. The key is to understand your passion and take courses or programs that will help you grow in that field.",
+          "After grade 12, consider whether you want to pursue a degree, diploma, or start working in your field of interest. It's all about aligning your strengths with the right opportunity.",
+          "Choosing a career should match your personality. Are you a natural leader? Maybe management or entrepreneurship is for you. Do you love science? Engineering or medicine might be great choices.",
+          "Your ideal career is a combination of your interests, talents, and the job market. Speak to professionals and gain exposure through internships or volunteering to figure out your path.",
+          "The science stream offers diverse career options like biotechnology, engineering, medicine, and data science. It's all about finding what excites you and aligns with your strengths.",
+          "Career planning involves setting short-term and long-term goals. Look into online resources, talk to mentors, and seek opportunities like internships to shape your career path.",
+          "Better career opportunities come with continuous learning, networking, and experience. Ensure that you continue developing skills through courses and by staying updated with industry trends.",
+          "A successful career involves choosing a field that excites you, getting the right qualifications, and continuously developing your skills. Choose your field wisely and take it step by step."
+        ]
+      },
+      {
+        "tag": "study_motivation",
+        "patterns": [
+          "I am feeling demotivated. Can you motivate me to study?",
+          "How can I stay focused and motivated for my studies?",
+          "I'm struggling to study, any advice?",
+          "How do I overcome distractions while studying?",
+          "What are the best ways to stay motivated to study?",
+          "How do I stay productive in school?",
+          "Can you help me find a way to study better?",
+          "I feel like giving up on my studies, what should I do?",
+          "How can I improve my concentration while studying?",
+          "I’m not interested in studying, how do I find motivation?",
+          "What can I do to avoid procrastination?",
+          "How do I stay positive while studying?",
+          "How do I handle stress and pressure from studies?",
+          "How do I set effective study goals?",
+          "What are some tips to stay motivated during tough studies?",
+          "I feel exhausted from studying, how can I push through?",
+          "How do I stay consistent with my study routine?",
+          "How can I turn studying into a habit?",
+          "How do I avoid burnout while studying?",
+          "What should I do when I feel overwhelmed with studies?"
+        ],
+        "responses": [
+          "Stay focused on your long-term goals. Remember, every effort you put into studying now will bring you closer to your dreams. You have the power to succeed!",
+          "Motivation can come from setting clear goals. Break your work into smaller tasks and reward yourself for achieving each step.",
+          "Start with small, manageable study sessions. Gradually increase your study time and remember to take breaks to refresh yourself.",
+          "Distractions are everywhere. Try to study in a quiet space, turn off your phone, and use time management techniques like the Pomodoro method to stay focused.",
+          "Stay motivated by focusing on your goals. Break your study tasks into smaller chunks, and remember that consistency will help you improve gradually.",
+          "Find a study schedule that works for you and stick to it. Consistent effort will help you stay productive and make studying a part of your routine.",
+          "Start by creating a study plan and sticking to it. Focus on one subject at a time and avoid multitasking, as it can lower your productivity.",
+          "Remember why you started your studies in the first place. Your education is a stepping stone toward a bright future, and every effort counts.",
+          "Improving concentration involves taking regular breaks, practicing mindfulness, and staying active. It's also helpful to study in short, focused bursts.",
+          "To find motivation, try to connect the subject with your long-term goals. Think about how this study will help you achieve your dreams in the future.",
+          "Procrastination is common, but the key is to break tasks into smaller chunks and take action. Just start with the first step, and the rest will follow.",
+          "Staying positive while studying requires a mindset shift. Focus on the progress you’re making, not on how difficult it seems. Keep going, and you’ll improve!",
+          "Handling stress involves staying organized, taking regular breaks, and practicing relaxation techniques. Stay calm, and tackle one thing at a time.",
+          "Set specific and achievable study goals. These goals can be short-term (e.g., finish a chapter) or long-term (e.g., master a subject). Make sure they are realistic.",
+          "When studying becomes tough, take a step back and remind yourself why you started. Focus on the long-term rewards, like a good grade or your dream career.",
+          "Push through exhaustion by prioritizing self-care. Take breaks, eat healthy, sleep well, and come back to your studies refreshed and ready to go.",
+          "Consistency is the key. Start by setting small, manageable tasks for each study session and track your progress. Over time, it becomes a habit.",
+          "To make studying a habit, create a regular study routine, and stick to it. Consistent effort will lead to long-term success.",
+          "Avoid burnout by balancing your studies with hobbies and relaxation. Make sure you’re managing stress in healthy ways, like exercising or spending time with friends.",
+          "When feeling overwhelmed, break your work into smaller tasks, prioritize them, and tackle each one slowly. Ask for help from teachers or peers when needed."
+        ]
+      },
+      {
+        "tag": "study_focus",
+        "patterns": [
+          "How can I focus on my studies?",
+          "How do I improve my concentration?",
+          "I have trouble staying focused, any tips?",
+          "What can I do to avoid distractions while studying?",
+          "How can I stay motivated to study?",
+          "What are the best techniques to improve focus while studying?",
+          "How can I concentrate better during study time?",
+          "Can you help me stay focused while studying?",
+          "How do I overcome procrastination?",
+          "What are some tips to improve my study habits?",
+          "How can I avoid getting distracted while studying?",
+          "What should I do to concentrate on my studies?",
+          "How do I stay focused during long study sessions?",
+          "How can I reduce distractions while studying?",
+          "What are some good concentration techniques for studying?",
+          "How do I focus when there are distractions around me?",
+          "What should I do if I can’t focus on my homework?",
+          "How can I train my brain to focus better?",
+          "What are some study tips for staying focused?",
+          "How can I create a study routine to stay focused?"
+        ],
+        "responses": [
+          "To stay focused, try breaking your study time into blocks of 25 minutes with 5-minute breaks in between. This is called the Pomodoro technique.",
+          "Avoid multitasking and create a distraction-free environment for studying. Put away your phone and other distractions.",
+          "Set clear goals for each study session. Knowing what you need to accomplish can help you stay focused and motivated.",
+          "Try using focus-enhancing tools like noise-canceling headphones or ambient music if it helps you concentrate.",
+          "Taking regular breaks and getting enough sleep is key to maintaining your focus during study time.",
+          "Use a study planner to keep track of assignments, and focus on one task at a time.",
+          "Practice mindfulness or meditation to improve concentration and reduce stress.",
+          "Keeping a positive mindset and rewarding yourself after completing tasks can also help you stay motivated.",
+          "Create a routine and stick to it. A consistent study schedule can improve your ability to focus.",
+          "You can use techniques like visualization to mentally prepare yourself for studying and staying on track.",
+          "If you're feeling overwhelmed, take a deep breath, relax, and break the task into smaller, more manageable chunks."
+        ]
+      },
+      {
+        "tag": "reduce_dropout",
+        "patterns": [
+          "What can I do to avoid dropping out of school?",
+          "How can I stay motivated to complete my studies?",
+          "I'm feeling like quitting school, what should I do?",
+          "What are some strategies to reduce the dropout rate for students?",
+          "How do I stay focused and finish my studies?",
+          "What should I do if I feel like giving up on my education?",
+          "How can I stay on track with my studies and avoid dropping out?",
+          "What advice do you have for students who feel like dropping out?",
+          "How can I stay motivated even when school feels hard?",
+          "How can I overcome my desire to quit school?",
+          "How do I keep going when I feel overwhelmed by school work?",
+          "What can I do to stay focused and not quit my studies?",
+          "How do I keep myself motivated in high school?",
+          "What are some ways to prevent students from dropping out of school?",
+          "How can I regain motivation when I feel like dropping out?",
+          "What steps can I take to stay in school and finish my education?",
+          "How do I keep my enthusiasm for school even when I'm struggling?",
+          "What can I do if I feel like I'm falling behind in school?",
+          "How can I make my education feel more meaningful?",
+          "What should I do if I’m feeling disconnected from my school studies?"
+        ],
+        "responses": [
+          "It’s important to find something you enjoy about learning, whether it’s a subject or activity. Try to make your education feel more relevant to your life.",
+          "Set small, achievable goals and celebrate each success to keep yourself motivated.",
+          "If you ever feel like giving up, talk to a trusted friend, family member, or counselor. They can provide support and perspective.",
+          "Remember that setbacks are normal. Focus on one step at a time and don't let yourself get overwhelmed by the bigger picture.",
+          "Creating a study routine and sticking to it can provide a sense of accomplishment and help you stay on track.",
+          "Take breaks, stay healthy, and get enough sleep. A balanced lifestyle is crucial to staying focused and motivated.",
+          "Find a support group or study buddy who can motivate and encourage you to stay in school.",
+          "Set long-term goals for your future, like a career, and think about how your education plays a role in achieving them.",
+          "Don’t hesitate to ask for help if you’re struggling with your coursework. Teachers, tutors, and classmates can offer assistance.",
+          "Surround yourself with positive influences who encourage your education and growth."
+        ]
+      },
+      {
+        "tag": "future_degrees",
+        "patterns": [
+          "What degrees can I pursue after high school?",
+          "What are the best courses to study after 12th?",
+          "What should I study after 12th to secure a good future?",
+          "Which degree should I choose after 12th science?",
+          "Should I go for engineering or medical after 12th?",
+          "What are the best career options after 12th?",
+          "What can I study after 12th commerce?",
+          "What degrees are available after 12th humanities?",
+          "Can you suggest some degrees to pursue after 12th?",
+          "What are the job opportunities after completing 12th?",
+          "What degree is best after completing 12th?",
+          "Which degrees have the highest salary prospects after 12th?",
+          "What courses can I pursue after 12th to become successful?",
+          "What are the top degrees to take after completing school?",
+          "Which degree has the most job opportunities after 12th?",
+          "Can you suggest courses after 12th that are in demand?",
+          "What are some degree programs that will ensure job security after 12th?",
+          "Which degrees are suitable for creative students after 12th?",
+          "What career options are available after finishing 12th science?",
+          "What courses lead to high-paying jobs after 12th?"
+        ],
+        "responses": [
+          "After 12th, you can pursue degrees in Engineering, Medicine, Computer Science, Business Administration, Arts, Law, Design, and many others.",
+          "If you're interested in science, consider degrees like BTech, MBBS, BSc, or even a career in Research and Development.",
+          "Commerce students can opt for degrees like BCom, BBA, CA, or Hotel Management. These open doors to a variety of career options.",
+          "Humanities students can pursue degrees in fields like Psychology, History, Sociology, Journalism, or Literature.",
+          "If you're unsure, taking a career counseling session can help you discover what degree aligns with your strengths and interests.",
+          "A degree in Business Administration (BBA), Economics, or Finance could be a great option after 12th for good career opportunities.",
+          "Creative students can consider degrees in Design, Animation, Fine Arts, Fashion, or Journalism.",
+          "Medical students can go for MBBS, Nursing, or paramedical courses, which offer good career prospects.",
+          "Engineering is a broad field, with opportunities in Civil, Mechanical, Electrical, and Computer Science, among others.",
+          "There are many options, and it's important to choose a degree based on your interests and career aspirations."
+        ]
+      },
+      {
+        "tag": "top_companies",
+        "patterns": [
+          "What are the top companies visited?",
+          "Which companies are the top recruiters?",
+          "Can you list the top companies that visit for placements?",
+          "Top companies that come for placements?"
+        ],
+        "responses": [
+          "The top companies that visit our campus for placements include [Company A], [Company B], and [Company C].",
+          "Some of the leading companies that frequently visit are [Company A], [Company B], and [Company C]."
+        ]
+      },
+      {
+        "tag": "total_companies_visited",
+        "patterns": [
+          "How many total companies have visited the campus?",
+          "What is the total number of companies that visit for placements?",
+          "Can you tell me the total number of companies that come for placements?"
+        ],
+        "responses": [
+          "A total of [Number] companies have visited our campus for placements this year.",
+          "We have had [Number] companies visit the campus for placements."
+        ]
+      },
+      {
+        "tag": "companies_visited",
+        "patterns": [
+          "What are the companies that have visited the campus?",
+          "Can you list all the companies that came for placements?",
+          "Companies that visited for placements?"
+        ],
+        "responses": [
+          "Companies that have visited the campus include [Company A], [Company B], [Company C], and many more.",
+          "The companies that have come for placements this year are [Company A], [Company B], and [Company C]."
+        ]
+      },
+      
+            
+       {
+                  "tag": "distance",
+                  "patterns": ["What is the distance between the college and the hostel?", "How far is the hostel from the university?", "Distance from university to hostel room", "Is the hostel close to the college?"],
+                  "responses": [
+                      "The distance between the college and the hostel is 500 meters, and it’s a comfortable walk.",
+                      "The hostel is just 500 meters away from the university, and it's walkable in a few minutes!",
+                      "It's only 500 meters from the hostel to the college, and it's an easy and pleasant walk."
+                  ]
+              },
+      {
+                    "tag": "campus_transportation",
+                    "patterns": ["Is there transportation from the college to the hostel?", "How do students travel from the college to the hostel?", "Transportation options for hostel and day scholars?", "How do day scholars commute?"],
+                    "responses": [
+                        "Within the campus, electric vehicles (EVs) are available to help students move between the college and hostel. For day scholars, they can be conveniently dropped at the nearby 'EB' bus stop if needed.",
+                        "We provide electric vehicles (EVs) for internal transport between the college and hostel. Day scholars can make use of the 'EB' bus stop for their commute.",
+                        "EVs are available for travel within the campus, including from the college to the hostel. Day scholars can be dropped at the 'EB' bus stop if required."
+                    ]
+      },
+              
+      
+      {
+        "tag": "placement_head",
+        "patterns": [
+          "Who is the placement head?",
+          "Can you tell me the name of the placement head?",
+          "Who manages the placement activities?"
+        ],
+        "responses": [
+          "The current placement head is [Name].",
+          "The placement head responsible for this year is [Name]."
+        ]
+      },
+      {
+        "tag": "placement_coordinator",
+        "patterns": [
+          "Who is the placement coordinator?",
+          "Can you tell me the name of the placement coordinator?",
+          "Who coordinates the placement activities?"
+        ],
+        "responses": [
+          "The placement coordinator is [Name].",
+          "[Name] is the coordinator for placement activities."
+        ]
+      },
+      {
+        "tag": "highest_placements_department",
+        "patterns": [
+          "Which department has the highest placements?",
+          "Can you tell me which department has the most placements?",
+          "Department with the highest number of placements?"
+        ],
+        "responses": [
+          "The department with the highest number of placements is [Department].",
+          "[Department] has the highest placement rate this year."
+        ]
+      },
+      {
+        "tag": "students_placed_last_year",
+        "patterns": [
+          "How many students were placed last year?",
+          "Can you tell me the number of students placed last year?",
+          "How many students got placed in the previous year?"
+        ],
+        "responses": [
+          "Last year, [Number] students were placed.",
+          "[Number] students were successfully placed in the previous year."
+        ]
+      },
+      {
+        "tag": "students_placed_so_far",
+        "patterns": [
+          "How many students have been placed so far?",
+          "Can you tell me the number of students placed until now?",
+          "How many students are placed up to now?"
+        ],
+        "responses": [
+          "So far, [Number] students have been placed.",
+          "[Number] students have been placed till now."
+        ]
+      },
+      {
+        "tag": "interns",
+        "patterns": [
+          "How many of them do internships?",
+          "Can you tell me the number of students doing internships?",
+          "Are there students who do internships? How many?"
+        ],
+        "responses": [
+          "[Number] students are currently doing internships.",
+          "There are [Number] students involved in internships."
+        ]
+      },
+      {
+        "tag": "placement_cell_internships",
+        "patterns": [
+          "Does the college placement cell arrange internships?",
+          "Can you tell me if the placement cell helps in arranging internships?",
+          "Does the placement cell support internships?"
+        ],
+        "responses": [
+          "Yes, the college placement cell arranges internships for students.",
+          "The placement cell does assist in arranging internships."
+        ]
+      },
+      {
+        "tag": "placement_cell_details",
+        "patterns": [
+          "Tell me about the placement cell.",
+          "Can you provide details about the placement cell?",
+          "What does the placement cell do?"
+        ],
+        "responses": [
+          "The placement cell is responsible for managing and facilitating placement activities. They organize interviews, coordinate with companies, and provide career guidance.",
+          "Our placement cell helps students with career counseling, arranging interviews, and connecting with potential employers."
+        ]
+      },
+      {
+        "tag": "placement_training_start",
+        "patterns": [
+          "When does the placement training start?",
+          "Can you tell me the start date for placement training?",
+          "When will the placement training begin?"
+        ],
+        "responses": [
+          "Placement training starts on [Date].",
+          "The placement training is scheduled to begin on [Date]."
+        ]
+      },
+      {
+        "tag": "special_placement_process",
+        "patterns": [
+          "What are the special processes for placements?",
+          "Can you tell me about the special placement procedures?",
+          "Are there any unique processes for placements?"
+        ],
+        "responses": [
+          "The special processes for placements include [Description of special processes].",
+          "Unique placement procedures involve [Description of special processes]."
+        ]
+      },
+      {
+        "tag": "students_placed_departments",
+        "patterns": [
+          "How many students were placed in particular departments (CSE/AI/MECH)?",
+          "Can you provide the number of placements in different departments?",
+          "How many students from each department got placed?"
+        ],
+        "responses": [
+          "[Number] students from the CSE department, [Number] from AI, and [Number] from MECH were placed.",
+          "The placement numbers are as follows: [Number] in CSE, [Number] in AI, and [Number] in MECH."
+        ]
+      },
+      {
+        "tag": "placement_salary_details",
+        "patterns": [
+          "placements",
+          "salary",
+          "packages",
+          "placement salary",
+          "salary packages",
+          "highest package",
+          "lowest package",
+          "placement details",
+          "Tell me about placements",
+          "Tell me about the salary packages",
+          "Placement details",
+          "What are the salary packages?",
+          "Can you tell me the placement salary details?",
+          "How much is the salary package?",
+          "What is the highest salary package offered?",
+          "What is the lowest salary package offered?",
+          "Can you tell me about the highest, lowest, and average salary packages?",
+          "Minimum and maximum packages?",
+          "Placement salary",
+          "What salary package did students get?",
+          "Tell me about the placement packages"
+        ],
+        "responses": [
+          "The highest salary package offered this year is 25 LPA, the lowest package is 3 LPA, and the average package is 8 LPA.",
+          "This year, the salary packages range from 3 LPA to 25 LPA, with an average of 8 LPA.",
+          "In placements, the highest package is 25 LPA, the lowest is 3 LPA, and the average salary offered is around 8 LPA.",
+          "The placement packages start from 3 LPA, with the highest being 25 LPA. The average package offered is 8 LPA.",
+          "This year’s placements had packages from 3 LPA to 25 LPA, with the average package being 8 LPA."
+        ]
+      },
+      {
+        "tag": "highest_salary_package",
+        "patterns": [
+          "What is the highest salary package offered?",
+          "Can you tell me the highest salary package?",
+          "What’s the maximum salary package during placements?"
+        ],
+        "responses": [
+          "The highest salary package offered this year is 25 LPA.",
+          "The maximum salary package this year was 25 LPA."
+        ]
+      },
+      {
+        "tag": "lowest_salary_package",
+        "patterns": [
+          "What is the lowest salary package offered?",
+          "Can you tell me the lowest salary package?",
+          "What’s the minimum salary package during placements?"
+        ],
+        "responses": [
+          "The lowest salary package offered this year is 3 LPA.",
+          "The minimum salary package this year was 3 LPA."
+        ]
+      },
+      {
+        "tag": "average_salary_package",
+        "patterns": [
+          "What is the average salary package offered?",
+          "Can you tell me the average salary package?",
+          "What’s the average salary package during placements?"
+        ],
+        "responses": [
+          "The average salary package offered this year is 8 LPA.",
+          "The average salary package this year is 8 LPA."
+        ]
+      },
+      {
+        "tag": "packages",
+        "patterns": [
+          "What are the packages offered?",
+          "Tell me about the salary packages",
+          "Minimum and maximum packages?",
+          "Average package offered"
+        ],
+        "responses": [
+          "The minimum package is 3 LPA, the highest package is 25 LPA, and the average package is 8 LPA.",
+          "We offer packages ranging from 3 LPA to 25 LPA, with an average of 8 LPA.",
+          "The salary packages start from 3 LPA and go up to 25 LPA. The average is around 8 LPA."
+        ]
+      },
+       {
+          "tag": "fees",
+          "patterns": [
+            "Fee",
+            "fee",
+            "Fee?",
+            "fee?",
+            "What is the fee structure?",
+            "Tell me about the fees",
+            "How much is the tuition?",
+            "What is the annual fee?",
+            "How much do I have to pay for the hostel?",
+            "What is the amount to be paid every year?",
+            "What will be the cost?",
+            "What is the cost of the course?",
+            "How much amount to be paid?",
+            "How much will it cost for a single course?",
+            "What will be the total money?",
+            "How much money is needed for the course?",
+            "How much money should be paid every year?",
+            "What will be the amount?",
+            "How much will be the amount?",
+            "What will be the price?",
+            "How much will be the price for the course?",
+            "What will be the total price?"
+          ],
+          "responses": [
+            "The fee structure varies for PG and UG studies. Please specify the course to get the exact fee details."
+          ]
+        },
+      
+      
+      
+      
+         
+       
+      
+        {
+          "tag": "fees_artificial_intelligence_and_data_science",
+          "patterns": [
+            "What is the fee structure for Artificial Intelligence and Data Science?",
+            "Tell me about the fees for Artificial Intelligence and Data Science",
+            "How much is the tuition for Artificial Intelligence and Data Science?",
+            "What is the annual fee for Artificial Intelligence and Data Science?",
+            "How much is the fee for AI and DS?",
+            "How much is the fee for AIDS?",
+            "what is the fee for AIDS?",
+            "what will be  the fee for AI&DS?",
+            "what will be  the fee for AI-DS?",
+            "what will be  the fee for AIDS?",
+            "What is the fee for artificial intelligence and data science engineering?"
+          ],
+          "responses": [
+            "The fee for Artificial Intelligence and Data Science Engineering is 15,000 rupee per semester and for the first graduate student 9,000 rupee per semester."
+          ]
+        },
+        {
+          "tag": "fees_mechanical_engineering",
+          "patterns": [
+            "What is the fee structure for Mechanical Engineering?",
+            "Tell me about the fees for Mechanical Engineering",
+            "How much is the tuition for Mechanical Engineering?",
+            "What is the annual fee for Mechanical Engineering?",
+            "How much is the fee for Mechanical Engineering?",
+            "How much is the fee for MECH?",
+            "what is the fee for MECH?",
+            "what will be  the fee for MECH?"
+          ],
+          "responses": [
+                 "The fee for Mechanical Engineering is 15,000 rupee per semester and for the first graduate student 9,000 rupee per semester."
+          ]
+        },
+        {
+          "tag": "fees_computer_science_engineering",
+          "patterns": [
+            "What is the fee structure for Computer Science Engineering?",
+            "Tell me about the fees for Computer Science Engineering",
+            "How much is the tuition for Computer Science Engineering?",
+            "What is the annual fee for Computer Science Engineering?",
+            "How much is the fee for CSE?",
+            "How much is the fee for CSE?",
+            "what is the fee for CSE?",
+            "what will be  the fee for CSE?"
+          ],
+          "responses": [
+           "The fee for Computer Science Engineering is 15,000 rupee per semester and for the first graduate student 9,000 rupee per semester."
+          ]
+        },
+        {
+        "tag": "fees_electrical_and_electronics_engineering",
+        "patterns": [
+          "What is the fee structure for Electrical and Electronics Engineering?",
+          "Tell me about the fees for Electrical and Electronics Engineering",
+          "How much is the tuition for Electrical and Electronics Engineering?",
+          "What is the annual fee for Electrical and Electronics Engineering?",
+          "How much is the fee for EEE?",
+          "What is the fee for EEE?",
+          "What will be the fee for EEE?",
+          "EEE fee structure"
+        ],
+        "responses": [
+          "The fee for Electrical and Electronics Engineering is 15,000 rupees per semester, and for the first graduate student, it is 9,000 rupees per semester."
+        ]
+      },
+      {
+        "tag": "fees_electrical_communication_engineering",
+        "patterns": [
+          "What is the fee structure for Electrical Communication Engineering?",
+          "Tell me about the fees for Electrical Communication Engineering",
+          "How much is the tuition for Electrical Communication Engineering?",
+          "What is the annual fee for Electrical Communication Engineering?",
+          "How much is the fee for ECE?",
+          "What is the fee for ECE?",
+          "What will be the fee for ECE?",
+          "ECE fee structure"
+        ],
+        "responses": [
+          "The fee for Electrical Communication Engineering is 15,000 rupees per semester, and for the first graduate student, it is 9,000 rupees per semester."
+        ]
+      },
+      
+      
+        {
+          "tag": "exam_fee",
+          "patterns": [
+            "What is the exam fee?",
+            "Tell me about the exam fee",
+            "How much is the exam fee?",
+            "Fee for exams",
+            "Exam payment details",
+            "What are the charges for the exam?",
+            "Can you provide the exam fee structure?",
+            "What is the amount to pay for the exam?",
+            "Exam fee details",
+            "How much do I need to pay for the exam?"
+          ],
+          "responses": [
+            "The exam fee for this semester is ₹300 per subject.",
+            "For regular exams, the fee is ₹300 per subject. Please make sure to pay before the deadline.",
+            "Each exam will cost ₹300. Kindly visit the administration office or the online portal for payment.",
+            "The fee for each subject exam is ₹300. Please check the due dates for payment.",
+            "Exam fees are ₹300 per subject. If you have any backlogs, the same fee applies per subject."
+          ]
+        },
+        {
+          "tag": "internet",
+          "patterns": [
+            "Is there WiFi in the college?",
+            "Tell me about the internet facilities on campus",
+            "Do I get internet access at the university?",
+            "College WiFi details",
+            "Is WiFi available 24/7 on campus?",
+            "What are the internet speeds at the university?",
+            "Can I use WiFi in all areas of the college?",
+            "How fast is the internet in the college?",
+            "Is internet access free for students?",
+            "Does the university offer high-speed internet?",
+            "Is the WiFi reliable in all parts of the campus?",
+            "How can I connect to the college WiFi?",
+            "Is there WiFi in the university library?",
+            "Is the internet connection stable for academic work?",
+            "Are there any restrictions on the internet usage?",
+            "Can I use the WiFi for personal use?",
+            "Where can I get the WiFi login details on campus?",
+            "Does the college provide internet access to students?",
+            "Is internet access available in the college hostel?",
+            "Are there any data limits on the campus WiFi?"
+          ],
+          "responses": [
+            "Yes, we offer high-speed WiFi throughout the campus, including classrooms, libraries, and common areas. You can contact the IT desk for login credentials.",
+            "WiFi is available 24/7 across the university, providing stable speeds for both academic and personal use.",
+            "You can access the college WiFi in all major areas, and it's available for free to all students.",
+            "The internet speed is fast enough for streaming, research, and regular online activities. Feel free to contact the IT team if you need assistance connecting."
+          ]
+        },
+        {
+          "tag": "administrative_contact_support",
+          "patterns": [
+            "Who do I contact for scholarship queries?",
+            "Can I get the administrative office phone number?",
+            "Administrative office contact information",
+            "How can I reach the college administration?",
+            "I need the college office contact details",
+            "Who handles administrative issues?",
+            "Who should I contact for fee-related issues?",
+            "Where can I get the contact information for fee inquiries?",
+            "How can I contact the administration for fee and scholarship concerns?",
+            "Can you provide the contact details of the administrative office?",
+            "Is there an email to contact the administrative office?",
+            "Where can I get information about scholarships?",
+            "Who do I contact for scholarship and fee-related concerns?"
+          ],
+          "responses": [
+            "For administrative matters such as fees, scholarships, or other college-related queries, you can contact the college administrative office at [office contact details].",
+            "Please reach out to the administrative office for any questions regarding fees, scholarships, and other administrative concerns. Their contact information is available on the college website.",
+            "If you have any queries related to scholarships or administrative processes, feel free to visit the administrative office during working hours or contact them via phone at [office contact details].",
+            "For support regarding administrative issues, including fees and scholarships, contact the administrative office directly. They are available to assist you during working hours."
+          ]
+        },
+        {
+          "tag": "department_contact_support",
+          "patterns": [
+            "Who can I contact for academic issues?",
+            "what is the use of the department",
+            "use of the department",
+            "what is the department for?",
+            "how the department are hepful",
+            "what is the usage of departments",
+            "Who do I talk to for academic doubts?",
+            "Can I get the department faculty contact?",
+            "Department faculty phone number",
+            "How can I reach the academic department?",
+            "Who should I contact for course-related issues?",
+            "I need help with academic problems, who can assist?",
+            "Where can I find my department contact information?",
+            "Can you provide the contact for my faculty?",
+            "Is there an email to reach the department faculty?",
+            "How can I get in touch with my department?",
+            "Who handles course-related concerns?",
+            "Can you provide the contact details of my department head?"
+          ],
+          "responses": [
+            "For any academic queries or doubts, you can contact the respective department's faculty or the head of the department. They will assist you with course-related issues.",
+            "You can reach out to your department faculty via email or phone for any academic concerns. The contact details are available on the college website.",
+            "For support regarding academic issues, please reach your department faculty. They are available during working hours to help with any course-related questions.",
+            "To get in touch with your department faculty, check the department's notice board or website for contact details. They are here to help with academic guidance."
+          ]
+        },
+        {
+          "tag": "college_timing",
+            "patterns": [
+          "What are the college hours?",
+          "What are the clg hours?",
+          "What are the University hours?",
+          "What are the uni hours?",
+          "What are the univ hours?",
+          "Can you tell me the college timings?",
+          "Can you tell me the clg timings?",
+          "Can you tell me the University timings?",
+          "Can you tell me the uni timings?",
+          "Can you tell me the univ timings?",
+          "What time does the college start and end?",
+          "What time does the clg start and end?",
+          "What time does the University start and end?",
+          "What time does the uni start and end?",
+          "What time does the univ start and end?",
+          "When does the college open and close?",
+          "When does the clg open and close?",
+          "When does the University open and close?",
+          "When does the uni open and close?",
+          "When does the univ open and close?",
+          "College timings",
+          "Clg timings",
+          "University timings",
+          "Uni timings",
+          "What are the working hours of the college?",
+          "What are the working hours of the clg?",
+          "What are the working hours of the University?",
+          "What are the working hours of the uni?",
+          "What are the working hours of the univ?",
+          "At what time does college start?",
+          "At what time does clg start?",
+          "At what time does University start?",
+          "At what time does uni start?",
+          "At what time does univ start?",
+          "What is the closing time of the college?",
+          "What is the closing time of the clg?",
+          "What is the closing time of the University?",
+          "What is the closing time of the uni?",
+          "What is the closing time of the univ?",
+          "How long is the college day?",
+          "How long is the clg day?",
+          "How long is the University day?",
+          "How long is the uni day?",
+          "How long is the univ day?",
+          "What time should I arrive at the college?",
+          "What time should I arrive at the clg?",
+          "What time should I arrive at the University?",
+          "What time should I arrive at the uni?",
+          "What time should I arrive at the univ?",
+          "Can you tell me the class timings?",
+          "Can you tell me the clg class timings?",
+          "Can you tell me the University class timings?",
+          "Can you tell me the uni class timings?",
+          "Can you tell me the univ class timings?",
+          "When do classes start and finish?",
+          "When do clg classes start and finish?",
+          "When do University classes start and finish?",
+          "When do uni classes start and finish?",
+          "When do univ classes start and finish?"
+        ],
+          "responses": [
+            "The college timing is from 9:10 AM to 5:20 PM.",
+            "Classes run from 9:10 AM to 5:20 PM. Please make sure to be on time.",
+            "The working hours of the college are from 9:10 AM in the morning to 5:20 PM in the evening.",
+            "College operates from 9:10 AM to 5:20 PM, with classes and activities scheduled throughout the day."
+          ]
+        },
+        {
+          "tag": "college_university_security",
+          "patterns": [
+            "What are the security measures in the college?",
+            "Is the university safe?",
+            "Tell me about college security",
+            "What security is there at the university?",
+            "Are there guards at the entrance?",
+            "How secure is the college campus?",
+            "What safety measures are in place for students?",
+            "University safety protocols",
+            "How does the college ensure student safety?",
+            "Security system in the college"
+          ],
+          "responses": [
+            "The college/university is highly secure, with 24/7 security personnel stationed at both entrance gates. Each gate is under constant CCTV surveillance to ensure safety at all times.",
+            "We take student safety very seriously. Both campus entrances have security guards and surveillance cameras, while the entire campus is monitored with a state-of-the-art security system. You can feel safe and secure on campus.",
+            "The university ensures full security with CCTV cameras covering all major areas, and security personnel at every entrance. Your safety is our top priority."
+          ]
+        },
+        {
+          "tag": "special_day_events",
+          "patterns": [
+            "What special events are celebrated in the college?",
+            "Are there any celebrations for festivals like Pongal and Onam?",
+            "Tell me about special day events in the university.",
+            "How do we celebrate special occasions in the college?",
+            "What kind of festivities happen during Indian festivals in the university?"
+          ],
+          "responses": [
+            "Every special occasion, such as Pongal and Onam, is celebrated joyfully in the college. Events are filled with fun activities, competitions, and engaging performances, bringing together students and staff in a festive spirit.",
+            "We celebrate all major Indian festivals with great enthusiasm. Special day events include cultural performances, games, and delicious food, ensuring a memorable experience for everyone involved."
+          ]
+        },
+        {
+          "tag": "college_events",
+      
+          "patterns": [
+          "What kind of events are organized at the college?",
+          "What types of events does the college host?",
+          "Can you give me an overview of college celebrations?",
+          "What types of activities are included in the annual day?",
+          "Tell me about the freshers' events and activities.",
+          "What are the highlights of the sports day at college?",
+          "What can I expect during symposia in college?",
+          "What events take place during the cultural fest?",
+          "Are there any workshops or seminars organized at the college?",
+          "What are the upcoming events in the college?",
+          "How often are events held at the college?",
+          "What special days are celebrated at the college?",
+          "Can you share details about the college’s annual fest?",
+          "What activities are organized for students during orientation?",
+          "What competitions are held at the college?",
+          "Are there guest lectures or talks arranged at the college?",
+          "What kind of cultural activities happen at the college?",
+          "Can you tell me about the music or dance events at the college?",
+          "What are the sports events organized at the college?",
+          "Are there any volunteer opportunities during college events?",
+          "How do I participate in college events?",
+          "What events celebrate student achievements?",
+          "Can you give me more information about the college's charity events?",
+          "Are there any themed events or celebrations at the college?",
+          "What events promote student collaboration and interaction?",
+          "What types of exhibitions or fairs are held at the college?",
+          "Can you tell me about the alumni events at the college?",
+          "What are the traditions associated with college events?",
+          "How can I stay updated about college events?",
+          "What are the notable past events at the college?",
+          "Are there any inter-college events or competitions?",
+          "What kind of events are organized at the univ?",
+          "What types of events does the uni host?",
+          "Can you give me an overview of clg celebrations?",
+          "What types of activities are included in the annual day at the univ?",
+          "Tell me about the freshers' events and activities at the clg.",
+          "What are the highlights of the sports day at the uni?",
+          "What can I expect during symposia in the clg?",
+          "What events take place during the cultural fest at the univ?",
+          "Are there any workshops or seminars organized at the uni?",
+          "What are the upcoming events in the clg?",
+          "How often are events held at the univ?",
+          "What special days are celebrated at the uni?",
+          "Can you share details about the clg’s annual fest?",
+          "What activities are organized for students during orientation at the univ?",
+          "What competitions are held at the uni?",
+          "Are there guest lectures or talks arranged at the clg?",
+          "What kind of cultural activities happen at the univ?",
+          "Can you tell me about the music or dance events at the uni?",
+          "What are the sports events organized at the clg?",
+          "Are there any volunteer opportunities during univ events?",
+          "How do I participate in events at the uni?",
+          "What events celebrate student achievements at the clg?",
+          "Can you give me more information about the univ's charity events?",
+          "Are there any themed events or celebrations at the uni?",
+          "What events promote student collaboration and interaction at the clg?",
+          "What types of exhibitions or fairs are held at the univ?",
+          "Can you tell me about the alumni events at the clg?",
+          "What are the traditions associated with events at the univ?",
+          "How can I stay updated about events at the clg?",
+          "What are the notable past events at the univ?",
+          "Are there any inter-college events or competitions at the uni?"
+          ],
+          "responses": [
+            "The college organizes a variety of events throughout the year, creating a vibrant atmosphere for all students. Events like the annual day are filled with performances, competitions, and showcases of talent, bringing everyone together in a spirit of celebration and joy.",
+            "Freshers' events are designed to welcome new students with fun activities, games, and opportunities to meet fellow classmates. Sports day features thrilling competitions, team spirit, and friendly rivalries, ensuring everyone enjoys a day of excitement and camaraderie.",
+            "Symposia at the college offer a platform for learning and discussion, featuring engaging speakers and interactive sessions. These events encourage students to connect and explore new ideas while enjoying a dynamic and collaborative environment."
+          ]
+        },
+        {
+          "tag": "sports",
+          "patterns": [
+            "What sports facilities are available at the college?",
+            "Are there any sports teams I can join?",
+            "Tell me about the sports activities in the university.",
+            "What kind of sports do you have in college?",
+            "How can I participate in sports events?",
+            "Are there facilities for different sports?",
+            "What sports competitions are held in the college?",
+            "Do you have a gym in the college?",
+            "What sports are popular at the university?",
+            "Is there a sports day celebration?",
+            "What facilities are there for athletic training?",
+            "How can I join a sports team?"
+          ],
+          "responses": [
+            "Our college has various sports facilities, including a gym, playgrounds, and courts for basketball, tennis, and volleyball. Students can join teams for competitive events and practice regularly.",
+            "Students are encouraged to participate in sports through various events and teams available for different activities. Join a team to hone your skills and compete!",
+            "With well-equipped gym facilities and dedicated sports teams for all genders, students have ample opportunities to develop their athletic skills and participate in friendly matches, tournaments, and inter-college competitions."
+          ]
+        },
+        {
+          "tag": "college_university_emergency",
+          "patterns": [
+            "What should I do in case of an emergency?",
+            "Who can I contact for emergencies at the college?",
+            "How is emergency response handled in the university?",
+            "Is there any protocol for emergencies?",
+            "Where can I find help during an emergency?"
+          ],
+          "responses": [
+            "If you face an emergency, please reach out to your department advisor or the nearest faculty member. They are there to support you and ensure your safety and well-being.",
+            "In case of an emergency, contact the nearest faculty or staff member for assistance. Emergency response teams are always on standby to help you.",
+            "In the event of an emergency, please follow the college's emergency protocols and contact designated personnel for immediate assistance."
+          ]
+        }
+
+      
+
+
+
+]
+}

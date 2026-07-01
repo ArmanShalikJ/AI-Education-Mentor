@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Risk Analysis</title>
+    <link rel="stylesheet" href="Frontend.css">
+    <script src="script.js" defer></script>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.content {
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.input-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    width: 100%;
+}
+
+
+.input-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+.analyze-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+.analyze-btn:hover {
+    background-color: #218838;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .input-form input {
+        font-size: 12px;
+    }
+
+    .analyze-btn {
+        font-size: 14px;
+    }
+}
+.arrow{
+    font-size :40px;
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    font-size: 24px;
+
+}
+    .progress-bar {
+        width: 100%;
+        background-color: #f3f3f3;
+        border: 1px solid #ddd;
+        margin-top: 20px;
+    }
+    .progress-bar-filled {
+        height: 20px;
+        width: 0;
+        background-color: #4caf50;
+        text-align: center;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>ANALYZE THE RISK OF STUDENT</h1>
+            <form class="input-form" id="studentForm">
+                <label>Academic Record</label>
+                <input type="number" id="academicRecord" placeholder="Enter Academic Record" required><br>
+                <label>Attendance</label>
+                <input type="number" id="attendance" placeholder="Enter Attendance Percentage" required><br>
+                <label>Behaviour</label>
+                <input type="number" id="behavior" placeholder="Enter Behaviour Score (1-5)" required><br>
+                <label>Socio-economic Factor</label>
+                <input type="number" id="socioEconomic" placeholder="Enter Socio-economic Factor (1-10)" required><br>
+                <button type="submit" class="analyze-btn">Predict the Risk</button>
+            </form>
+
+            <div class="progress-bar">
+                <div class="progress-bar-filled" id="progress-bar-filled">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('studentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const academicRecord = parseInt(document.getElementById('academicRecord').value);
+            const attendance = parseInt(document.getElementById('attendance').value);
+            const behavior = parseInt(document.getElementById('behavior').value);
+            const socioEconomic = parseInt(document.getElementById('socioEconomic').value);
+
+            // Calculate Risk Score based on a simple average of the four factors
+            const riskScore = (academicRecord + attendance + behavior * 20 + socioEconomic * 10) / 4;
+
+            // Normalize the risk score to be between 0 and 100
+            const normalizedRisk = Math.min(Math.max(riskScore, 0), 100);
+
+            const progressBar = document.getElementById('progress-bar-filled');
+            progressBar.style.width = `${normalizedRisk}%`;
+            progressBar.textContent = `${Math.round(normalizedRisk)}%`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 600px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .division {
+            flex: 1 1 calc(50% - 20px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .full-width {
+            flex: 1 1 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="/post" method="POST">
+            <div class="division">
+                <label for="roll_no">Roll Number</label>
+                <input type="text" id="roll_no" name="roll_no" placeholder="Enter your Roll Number" required>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" name="gender" placeholder="Enter your Gender" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your Address" required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter your City" required>
+
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" name="pincode" placeholder="Enter your Pincode" required>
+
+                <label for="district">District</label>
+                <input type="text" id="district" name="district" placeholder="Enter your District" required>
+            </div>
+
+            <div class="division">
+                
+                <label for="father_name">Father's Name</label>
+                <input type="text" id="father_name" name="father_name" placeholder="Enter Father's Name" required>
+
+                <label for="father_phone">Father's Phone Number</label>
+                <input type="text" id="father_phone" name="father_phone" placeholder="Enter Father's Phone Number" required>
+
+                <label for="father_occupation">Father's Occupation</label>
+                <input type="text" id="father_occupation" name="father_occupation" placeholder="Enter Father's Occupation" required>
+
+                <label for="mother_name">Mother's Name</label>
+                <input type="text" id="mother_name" name="mother_name" placeholder="Enter Mother's Name" required>
+
+                <label for="mother_phone">Mother's Phone Number</label>
+                <input type="text" id="mother_phone" name="mother_phone" placeholder="Enter Mother's Phone Number" required>
+
+                <label for="mother_occupation">Mother's Occupation</label>
+                <input type="text" id="mother_occupation" name="mother_occupation" placeholder="Enter Mother's Occupation" required>
+
+                <label for="religion">Religion</label>
+                <input type="text" id="religion" name="religion" placeholder="Enter your Religion" required>
+
+                <label for="mother_tongue">Mother Tongue</label>
+                <input type="text" id="mother_tongue" name="mother_tongue" placeholder="Enter your Mother Tongue" required>
+            </div>
+
+            <div class="full-width">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
